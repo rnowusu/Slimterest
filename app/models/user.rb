@@ -4,6 +4,8 @@ class User < ApplicationRecord
   #look up allow nil again
   attr_reader :password
 
+  after_initialize :ensure_session_token
+
   def self.find_by_credentials(username, password)
     user = User.find_by(username: username)
     if user && user.password.is_password?(password)
