@@ -1,6 +1,7 @@
 class User < ApplicationRecord
   validates :username, :password_digest, :session_token, presence: true
-  validates :password, presence: true, length: { minimum: 6, allow_nil: true }
+  validates :username, uniqueness: true
+  validates :password, presence: true, length: { minimum: 6 }, allow_nil: true
   #look up allow nil again
   attr_reader :password
 
@@ -8,8 +9,8 @@ class User < ApplicationRecord
 
   def self.find_by_credentials(username, password)
     user = User.find_by(username: username)
-    if user && user.password.is_password?(password)
-      login(user)
+    if user && user.is_password?(password)
+      return user
       # render json
     else
       return nil
