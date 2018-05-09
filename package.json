@@ -20,11 +20,15 @@
     "test": "test"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "postinstall": "webpack"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/rnowusu/Slimterest.git"
+  },
+  "engines": {
+    "node": "8.9.4",
+    "npm": "5.6.0"
   },
   "keywords": [],
   "author": "",
@@ -32,5 +36,8 @@
   "bugs": {
     "url": "https://github.com/rnowusu/Slimterest/issues"
   },
-  "homepage": "https://github.com/rnowusu/Slimterest#readme"
+  "homepage": "https://github.com/rnowusu/Slimterest#readme",
+  "devDependencies": {
+    "webpack-cli": "^2.1.3"
+  }
 }
