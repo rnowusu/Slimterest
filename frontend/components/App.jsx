@@ -1,9 +1,10 @@
 import React from 'react';
-
+import GreetingContainer from './greeting_container'
 const App = () => {
   return (
     <div>
-      <h1> *Kid Mero Voice* Yerro, Welcome to React Slimterest</h1>
+      <h1> Welcome to Slimterest </h1>
+      <GreetingContainer />
     </div>
   );
 };
