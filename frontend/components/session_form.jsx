@@ -18,14 +18,12 @@ class SessionForm extends React.Component {
     e.preventDefault();
     const user = merge({}, this.state)
     this.props.processForm(user);
+    this.setState({username: "", password: ""});
   }
 
   update(field){
     return e => {
-      console.log(field);
-      console.log(e.target.value);
       this.setState({[field]: e.target.value});
-      console.log(this.state);
     }
   }
 
