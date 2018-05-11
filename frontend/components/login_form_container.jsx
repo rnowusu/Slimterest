@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { login } from '../actions/session_actions'
 import SessionForm from './session_form'
 import { Link } from 'react-router-dom';
+//import { withRouter } from 'react-router-dom'
 
 const mapStateToProps = (state, ownProps) => {
   return {

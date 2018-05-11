@@ -31,15 +31,18 @@ export const receiveErrors = (errors) => {
 
 export const signup = (user) => (dispatch) => {
   return SessionApiUtil.signup(user).then((user) => dispatch(receiveCurrentUser(user))
-), err => (dispatch(receiveErrors(err.responseJSON)))
+, err => (dispatch(receiveErrors(err.responseJSON))))
 };
 
 export const login = (user) => (dispatch) => {
+
   return SessionApiUtil.login(user).then((user) => {
-    // debugger
+
     return dispatch(receiveCurrentUser(user));
-  }
-), err => (dispatch(receiveErrors(err.responseJSON)))
+    
+  }, err => {
+  return dispatch(receiveErrors(err.responseJSON))
+})
 };
 
 export const signout = () => (dispatch) => {

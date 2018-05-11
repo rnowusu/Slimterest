@@ -21,9 +21,12 @@ class SessionForm extends React.Component {
   }
 
   update(field){
-    return e => this.setState = ({
-      [field]: e.target.value
-    });
+    return e => {
+      console.log(field);
+      console.log(e.target.value);
+      this.setState({[field]: e.target.value});
+      console.log(this.state);
+    }
   }
 
   renderErrors() {
@@ -48,6 +51,7 @@ class SessionForm extends React.Component {
             <br/>
             Please {this.props.formType} or {this.props.navLink}.
             <br/>
+            {this.renderErrors()}
             <br/>
             <label>
               Username:
@@ -61,6 +65,7 @@ class SessionForm extends React.Component {
                 onChange={this.update("password")}
                 />
             </label>
+            <input type="submit" value={this.props.formType} />
           </form>
 
         </div>
