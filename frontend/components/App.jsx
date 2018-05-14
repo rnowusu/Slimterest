@@ -13,7 +13,7 @@ const App = () => {
       <Modal />
       <header>
         <Link to="/" className="header-link">
-        <h1> Welcome to Slimterest </h1>
+        <h1 className="header-splash"> Welcome to Slimterest </h1>
       </Link>
         <GreetingContainer />
       </header>

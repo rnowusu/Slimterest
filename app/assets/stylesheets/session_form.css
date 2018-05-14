@@ -6,7 +6,6 @@
   left: 0;
   background: rgba(0, 0, 0, 0.5);
   z-index: 10;
-  /* background-image: '/Users/ryanowusu/Desktop/Main Course/slimterest/app/assets/images/bg_multi_case_grid_no_text_white_55_percent-2000ab22.jpg'; */
   background-image: url('pinterest_background.jpg');
   background-color: #FFFFF0;
 }
@@ -31,7 +30,47 @@
   display: flex;
   justify-content: center;
   /* flex-direction: column; */
-  border: 1px solid black;
+  border: 1px solid #E0E0E0;
   border-radius: 5px;
-  height: 300px;
+  height: 400px;
+  width: 400px;
+  box-shadow: 1px 1px 1px 1px black;
 }
+
+.session-form-headers {
+  text-align: center;
+  color: #555;
+}
+
+.session-submit {
+  background-color: red;
+  color: white;
+  width: 100%;
+  height: 30px;
+  border-radius: 5px;
+  font-size: 20px;
+}
+
+.login-input {
+  width: 100%;
+  height: 30px;
+  border-radius: 5px;
+  font-size: 20px;
+  border: 1px solid #555
+}
+.errors {
+  color: red;
+  list-style-type: none;
+}
+.header-splash {
+  color: #555;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+.header-link {
+  text-decoration: none;
+}
+/* .header-splash:active {
+  text-decoration: none;
+} */

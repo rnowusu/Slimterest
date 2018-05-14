@@ -19,6 +19,8 @@ class SessionForm extends React.Component {
     const user = merge({}, this.state)
     this.props.processForm(user);
     this.setState({username: "", password: ""});
+    this.props.closeModal();
+    // if (this.props.loggedIn){this.props.closeModal();}
     // this.props.loggedIn ? : closeModal : null
   }
 
@@ -44,24 +46,24 @@ class SessionForm extends React.Component {
 
       return (
         <div className="login-form-container">
-          <h3>{this.props.formType}</h3>
-          <br />
-          <br />
           <form onSubmit={this.handleSubmit.bind(this)}
             className='login-form-box'>
-            Welcome to Slimterest!
-            <br/>
+            <h2 className="session-form-headers">Welcome to Slimterest!</h2>
+            <h3 className="session-form-headers">{this.props.formType}</h3>
             Please {this.props.formType} or {this.props.otherForm}.
             <br/>
             <div onClick={this.props.closeModal}
               className='close-x' >X</div>
+            <ul className="errors">
             {this.renderErrors()}
+            </ul>
             <div className="login-form">
             <label>
               Username:
               <input type='text' value={this.state.username}
                 onChange={this.update("username")}
-                className="login-input"/>
+                className="login-input"
+                placeholder="Username"/>
             </label>
               <br/>
               <br/>
@@ -70,9 +72,11 @@ class SessionForm extends React.Component {
               <input type='password' value={this.state.password}
                 onChange={this.update("password")}
                 className="login-input"
+                placeholder="Password"
                 />
             </label>
             <br/>
+            <br />
             <input className="session-submit" type="submit" value={this.props.formType} />
           </div>
           </form>

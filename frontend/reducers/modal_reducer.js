@@ -3,7 +3,7 @@ import { OPEN_MODAL, CLOSE_MODAL } from '../actions/modal_actions.js';
 
 import merge from 'lodash/merge'
 
-const modalReducer = (state = null, action) => {
+const modalReducer = (state = 'Log in', action) => {
   let newState;
     switch(action.type){
       case OPEN_MODAL:
