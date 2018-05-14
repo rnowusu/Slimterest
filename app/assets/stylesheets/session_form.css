@@ -56,7 +56,7 @@
   height: 30px;
   border-radius: 5px;
   font-size: 20px;
-  border: 1px solid #555;
+  border: 2px solid #d9dde2;
 }
 .errors {
   color: red;
