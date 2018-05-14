@@ -16,7 +16,14 @@ const Greeting = (props) => {
     <Link to={'/signup'}>Sign Up!</Link>
       <br/>
     <Link to={'/login'}>Login Here!</Link>
-    </div>
+    <nav className="login-signup">
+      <button onClick={() => props.openModal('Log in')}>Log in</button>
+        &nbsp;or&nbsp;
+      <button onClick={() => props.openModal('Sign up')}>Sign up</button>
+        &nbsp;&nbsp;
+        <button > Demo User</button>
+    </nav>
+  </div>
   );}
 };
 

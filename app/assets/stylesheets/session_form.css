@@ -1,0 +1,36 @@
+.modal-background {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 10;
+  /* background-image: '/Users/ryanowusu/Desktop/Main Course/slimterest/app/assets/images/bg_multi_case_grid_no_text_white_55_percent-2000ab22.jpg'; */
+  background-image: url('/assets/bg_multi_case_grid_no_text_white_55_percent-2000ab22.jpg');
+}
+
+.modal-child {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border-radius: 5px;
+}
+
+.close-x {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  cursor: pointer;
+}
+
+.login-form-container {
+  display: flex;
+  justify-content: center;
+  /* flex-direction: column; */
+  border: 1px solid black;
+  border-radius: 5px;
+  height: 300px;
+}

@@ -42,28 +42,38 @@ class SessionForm extends React.Component {
   render(){
 
       return (
-        <div>
-          <h3>{this.props.formType}</h3>
-          <form onSubmit={this.handleSubmit.bind(this)}>
+        <div className="login-form-container">
+          <h3>{this.props.formType}:</h3>
+          <br />
+          <br />
+          <form onSubmit={this.handleSubmit.bind(this)}
+            className='login-form-box'>
             Welcome to Slimterest!
             <br/>
-            Please {this.props.formType} or {this.props.navLink}.
+            Please {this.props.formType} or {this.props.otherForm}.
             <br/>
+            <div onClick={this.props.closeModal}
+              className='close-x' >X</div>
             {this.renderErrors()}
-            <br/>
+            <div className="login-form">
             <label>
               Username:
               <input type='text' value={this.state.username}
-                onChange={this.update("username")}/>
+                onChange={this.update("username")}
+                className="login-input"/>
             </label>
-
+              <br/>
+              <br/>
             <label>
               Password:
               <input type='password' value={this.state.password}
                 onChange={this.update("password")}
+                className="login-input"
                 />
             </label>
-            <input type="submit" value={this.props.formType} />
+            <br/>
+            <input className="session-submit" type="submit" value={this.props.formType} />
+          </div>
           </form>
 
         </div>

@@ -3,6 +3,7 @@ import { closeModal } from '../actions/modal_actions';
 import { connect } from 'react-redux';
 import LoginFormContainer from './login_form_container';
 import SignupFormContainer from './signup_form_container';
+
 //by importing react, is our functional component implicitly
 //a functional component
 
@@ -12,10 +13,10 @@ const Modal = ({modal, closeModal}) => {
   }
   let component;
   switch(modal){
-    case 'login':
+    case 'Log in':
       component = <LoginFormContainer />;
       break;
-    case 'signup':
+    case 'Sign up':
       component = <SignupFormContainer />;
       break;
     default:
@@ -33,7 +34,7 @@ const Modal = ({modal, closeModal}) => {
 
 const mapStateToProps = (state) => {
     return {
-      modal: state.ui.modal;
+      modal: state.ui.modal
     };
 };
 
@@ -42,3 +43,5 @@ const mapDispatchToProps = (dispatch) => {
       closeModal: () => dispatch(closeModal())
     };
 };
+
+export default connect(mapStateToProps, mapDispatchToProps)(Modal)
