@@ -7,7 +7,8 @@
   background: rgba(0, 0, 0, 0.5);
   z-index: 10;
   /* background-image: '/Users/ryanowusu/Desktop/Main Course/slimterest/app/assets/images/bg_multi_case_grid_no_text_white_55_percent-2000ab22.jpg'; */
-  background-image: url('/assets/bg_multi_case_grid_no_text_white_55_percent-2000ab22.jpg');
+  background-image: url('pinterest_background.jpg');
+  background-color: #FFFFF0;
 }
 
 .modal-child {

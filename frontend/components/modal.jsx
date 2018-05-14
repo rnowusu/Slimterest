@@ -7,7 +7,7 @@ import SignupFormContainer from './signup_form_container';
 //by importing react, is our functional component implicitly
 //a functional component
 
-const Modal = ({modal, closeModal}) => {
+const Modal = ({modal, closeModal, loggedIn}) => {
   if (!modal){
     return null
   }
@@ -34,7 +34,8 @@ const Modal = ({modal, closeModal}) => {
 
 const mapStateToProps = (state) => {
     return {
-      modal: state.ui.modal
+      modal: state.ui.modal,
+      loggedIn: state.session.id
     };
 };
 

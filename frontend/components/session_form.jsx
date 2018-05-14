@@ -19,6 +19,7 @@ class SessionForm extends React.Component {
     const user = merge({}, this.state)
     this.props.processForm(user);
     this.setState({username: "", password: ""});
+    // this.props.loggedIn ? : closeModal : null
   }
 
   update(field){
@@ -43,7 +44,7 @@ class SessionForm extends React.Component {
 
       return (
         <div className="login-form-container">
-          <h3>{this.props.formType}:</h3>
+          <h3>{this.props.formType}</h3>
           <br />
           <br />
           <form onSubmit={this.handleSubmit.bind(this)}
