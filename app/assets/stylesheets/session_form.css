@@ -34,7 +34,7 @@
   border-radius: 5px;
   height: 400px;
   width: 400px;
-  box-shadow: 1px 1px 1px 1px black;
+  box-shadow: 1px 1px 1px 1px grey;
 }
 
 .session-form-headers {
@@ -56,7 +56,7 @@
   height: 30px;
   border-radius: 5px;
   font-size: 20px;
-  border: 1px solid #555
+  border: 1px solid #555;
 }
 .errors {
   color: red;

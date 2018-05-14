@@ -18,7 +18,6 @@ document.addEventListener('DOMContentLoaded', () => {
   } else {
     store = configureStore();
   }
-  // debugger
   // window.login = login;
   // window.signout = signout;
   // window.signup = signup;

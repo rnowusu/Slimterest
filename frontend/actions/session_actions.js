@@ -7,7 +7,7 @@ export const RECEIVE_ERRORS = "RECEIVE_ERRORS";
 
 
 export const receiveCurrentUser = (user) => {
-  // debugger
+
   return ({
     type: RECEIVE_CURRENT_USER,
     user: user
@@ -39,7 +39,7 @@ export const login = (user) => (dispatch) => {
   return SessionApiUtil.login(user).then((user) => {
 
     return dispatch(receiveCurrentUser(user));
-    
+
   }, err => {
   return dispatch(receiveErrors(err.responseJSON))
 })
