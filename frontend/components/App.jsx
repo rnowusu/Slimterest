@@ -14,8 +14,8 @@ const App = () => {
       <header>
         <GreetingContainer />
         <Link to="/" className="header-link">
-        <h1 className="header-splash"> Welcome to Slimterest </h1>
-      </Link>
+          <h1 className="header-splash"> Welcome to Slimterest </h1>
+        </Link>
       </header>
 
       <AuthRoute exact path='/login' component={LoginFormContainer} />
