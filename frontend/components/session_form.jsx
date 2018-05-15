@@ -48,6 +48,8 @@ class SessionForm extends React.Component {
         <div className="login-form-container">
           <form onSubmit={this.handleSubmit.bind(this)}
             className='login-form-box'>
+            <a href="http://www.clker.com/cliparts/g/d/D/A/l/9/sl-logo.svg.thumb.png">
+              <img className="logo-svg-modal" src='http://www.clker.com/cliparts/g/d/D/A/l/9/sl-logo.svg.thumb.png' alt='Sl Logo clip art'/></a>
             <h2 className="session-form-headers">Welcome to Slimterest!</h2>
             <h3 className="session-form-headers">{this.props.formType}</h3>
             Please {this.props.formType} or {this.props.otherForm}.
