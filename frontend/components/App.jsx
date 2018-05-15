@@ -12,10 +12,10 @@ const App = () => {
     <div>
       <Modal />
       <header>
+        <GreetingContainer />
         <Link to="/" className="header-link">
         <h1 className="header-splash"> Welcome to Slimterest </h1>
       </Link>
-        <GreetingContainer />
       </header>
 
       <AuthRoute exact path='/login' component={LoginFormContainer} />
