@@ -5,6 +5,18 @@ class User < ApplicationRecord
   #look up allow nil again
   attr_reader :password
 
+  has_many(
+  :pins,
+  class_name: :Pin,
+  foreign_key: :user_id
+)
+
+  has_many(    
+  :boards,
+  class_name: :Board,
+  foreign_key: :user_id
+)
+
   after_initialize :ensure_session_token
 
   def self.find_by_credentials(username, password)
