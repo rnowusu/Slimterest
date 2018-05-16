@@ -3,25 +3,27 @@ import LoginFormContainer from './login_form_container';
 import SignupFormContainer from './signup_form_container';
 import GreetingContainer from './greeting_container';
 import { Link } from 'react-router-dom'
-import { AuthRoute, ProtectedRoute } from '../util/route_util'
+import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import { Route } from 'react-router-dom';
-import Modal from './modal'
+import Modal from './modal';
+import PinIndexContainer from './pin_index_container';
 
 const App = () => {
   return (
     <div>
-      <Modal />
+      
       <header>
         <GreetingContainer />
-        <Link to="/" className="header-link">
-          <h1 className="header-splash"> Welcome to Slimterest </h1>
-        </Link>
       </header>
-
-      <AuthRoute exact path='/login' component={LoginFormContainer} />
-      <AuthRoute exact path ='/signup' component={SignupFormContainer} />
+      <AuthRoute exact path='/' component={Modal} />
+      <AuthRoute exact path='/login' component={Modal} />
+      <AuthRoute exact path ='/signup' component={Modal} />
     </div>
   );
 };
 
 export default App;
+
+// <Link to="/" className="header-link">
+//   <h1 className="header-splash"> Welcome to Slimterest </h1>
+// </Link>

@@ -19,7 +19,7 @@ class SessionForm extends React.Component {
     const user = merge({}, this.state)
     this.props.processForm(user);
     this.setState({username: "", password: ""});
-    this.props.closeModal();
+    // this.props.closeModal();
     // if (this.props.loggedIn){this.props.closeModal();}
     // this.props.loggedIn ? : closeModal : null
   }

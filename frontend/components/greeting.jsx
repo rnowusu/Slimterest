@@ -1,8 +1,13 @@
 import React from 'react'
 import GreetingContainer from './greeting';
 import { Link } from 'react-router-dom';
-
+import { AuthRoute, ProtectedRoute } from '../util/route_util';
+import PinIndexContainer from './pin_index_container';
 const Greeting = (props) => {
+  const handleSignOut = () => {
+    props.signout();
+    props.openModal('Log in')
+  }
   if (props.user){
     return (
       <div>
@@ -24,7 +29,8 @@ const Greeting = (props) => {
           <li className="header-extra"><i className="fas fa-ellipsis-h" /></li>
         </ul>
         <h3>Welcome, {props.user.username}</h3>
-        <button onClick={props.signout}>Sign Out</button>
+          <ProtectedRoute exact path='/' component={PinIndexContainer} />
+        <button onClick={handleSignOut}>Sign Out</button>
       </div>
     );
   }
