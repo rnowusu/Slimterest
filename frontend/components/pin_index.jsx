@@ -15,6 +15,7 @@ class PinIndex extends React.Component{
       return (
         <li key={pin.id} className="pin">
           Pin {pin.id}: <br/>
+        <img className="pin-img" src={pin.picture_url}/> <br/>
           {pin.name} <br/>
           {pin.description} <br/>
         {pin.category}
@@ -23,7 +24,7 @@ class PinIndex extends React.Component{
     })
     return (
       <div>
-        <ul>{pins}</ul>
+        <ul className="pins">{pins}</ul>
       </div>
     );
   }

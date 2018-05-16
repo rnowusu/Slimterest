@@ -6,7 +6,12 @@ git_source(:github) do |repo_name|
 end
 
 # gem 'rails_12factor', group: :production
+# Allows attatchments of images
 gem 'paperclip', '~> 5.0.0'
+# allow for application.rb to configure paperclip to use s3
+gem 'aws-sdk', '< 3.0'
+# adds git ignore for aws keys
+gem 'figaro'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.6'
 # Use postgresql as the database for Active Record

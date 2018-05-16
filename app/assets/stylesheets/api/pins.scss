@@ -1,3 +1,14 @@
 // Place all the styles related to the api/pins controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.pins {
+  display: flex;
+}
+
+.pin-img {
+  width: 236px;
+  border-radius: 10px;
+  margin-right: 25px;
+  /* flex-wrap: wrap; */
+
+}
