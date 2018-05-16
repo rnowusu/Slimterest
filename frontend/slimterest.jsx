@@ -3,8 +3,8 @@ import ReactDOM from 'react-dom';
 import configureStore from './store/store'
 import Root from './components/root'
 import { signup, login, signout } from './actions/session_actions';
-import { fetchPins, fetchPin, createPin } from './util/pin_api_util';
-import { createBoard, fetchBoard } from './util/board_api_util';
+import { fetchPins, fetchPin, createPin } from './actions/pin_actions';
+import { createBoard, fetchBoard } from './actions/board_actions';
 // import * as SessionApiUtil from './util/session_api_util';
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -23,12 +23,12 @@ document.addEventListener('DOMContentLoaded', () => {
   // window.signout = signout;
   // window.signup = signup;
 
-  // window.fetchPins = fetchPins;
-  // window.fetchPin = fetchPin;
-  // window.createPin = createPin;
+  window.fetchPins = fetchPins;
+  window.fetchPin = fetchPin;
+  window.createPin = createPin;
 
-  // window.createBoard = createBoard;
-  // window.fetchBoard = fetchBoard;
+  window.createBoard = createBoard;
+  window.fetchBoard = fetchBoard;
 
   window.getState = store.getState;
   window.dispatch = store.dispatch;
