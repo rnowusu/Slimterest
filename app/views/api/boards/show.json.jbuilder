@@ -1,1 +1,1 @@
-json.extract! @board, :name, :secret_status, :user_id
+json.extract! @board, :id, :name, :secret_status, :user_id
