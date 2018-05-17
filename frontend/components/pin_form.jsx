@@ -11,7 +11,7 @@ class PinForm extends React.Component {
       description: "",
       picture: null,
       pictureUrl: "",
-      userId: this.props.currentUser.id,
+      userId: null,
       boardId: 1
     };
   }
@@ -24,7 +24,7 @@ class PinForm extends React.Component {
     formData.append("pin[category]", this.state.category)
     formData.append("pin[description]", this.state.description)
     formData.append("pin[picture]", this.state.picture)
-    formData.append("pin[user_id]", this.state.userId)
+    formData.append("pin[user_id]", this.props.currentUser.id)
     formData.append("pin[board_id]", this.state.boardId)
     // debugger
     this.props.createPin(formData);
