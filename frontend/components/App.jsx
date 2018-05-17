@@ -7,13 +7,15 @@ import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import { Route } from 'react-router-dom';
 import Modal from './modal';
 import PinIndexContainer from './pin_index_container';
+import PinFormContainer from './create_pin_form_container'
 
 const App = () => {
   return (
     <div>
-      
+
       <header>
         <GreetingContainer />
+        <PinFormContainer />
       </header>
       <AuthRoute exact path='/' component={Modal} />
       <AuthRoute exact path='/login' component={Modal} />
