@@ -10,19 +10,23 @@ class PinForm extends React.Component {
       category: "",
       description: "",
       picture: null,
-      pictureUrl: ""
-      // userId: this.props.currentUser
+      pictureUrl: "",
+      userId: this.props.currentUser.id,
+      boardId: 1
     };
   }
 
   handleSubmit(e){
     e.preventDefault();
-    const file = this.state.imageFile;
+    const file = this.state.picture;
     const formData = new FormData();
     formData.append("pin[name]", this.state.name)
     formData.append("pin[category]", this.state.category)
     formData.append("pin[description]", this.state.description)
     formData.append("pin[picture]", this.state.picture)
+    formData.append("pin[user_id]", this.state.userId)
+    formData.append("pin[board_id]", this.state.boardId)
+    // debugger
     this.props.createPin(formData);
 
 

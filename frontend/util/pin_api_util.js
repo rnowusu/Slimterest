@@ -18,7 +18,7 @@ export const createPin = (pin, callback) => {
     url: `/api/users/${currentUser.id}/pins`,
     contentType: false,
     processData: false,
-    data: { pin }//,
+    data: pin//,
     //success: () => callback();
   });
 };
