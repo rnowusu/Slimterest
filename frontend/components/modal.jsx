@@ -24,7 +24,7 @@ const Modal = ({modal, closeModal, loggedIn}) => {
   }
 
   return (
-    <div className="modal-background">
+    <div className="modal-background" style={{background: `linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(`+ `${staticImages.background}`+`)`}}>
       <div className="modal-child" onClick={e => e.stopPropagation()}>
         { component }
       </div>

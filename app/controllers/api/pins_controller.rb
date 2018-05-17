@@ -1,7 +1,17 @@
 class Api::PinsController < ApplicationController
   def index
+    # puts "I AM IN INDEX"
+    # puts params
+    # puts "THOSE WERE PARAMS"
+    #
     @pins = Pin.all
-    render 'api/pins/index'
+    user_id = params[:user_id]
+    if user_id
+      @pins = Pin.where(user_id: user_id)
+      render 'api/pins/index'
+    else
+      render 'api/pins/index'
+    end
   end
 
   def create

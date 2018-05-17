@@ -13,3 +13,10 @@ export const fetchBoard = (id) => {
     url: `api/users/${currentUser.id}/boards/${id}`
   });
 };
+
+export const fetchBoards = () => {
+  return $.ajax({
+    method: "GET",
+    url: `api/users/${currentUser.id}/boards`
+  });
+}

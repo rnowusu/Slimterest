@@ -24,6 +24,11 @@ class SessionForm extends React.Component {
     // this.props.loggedIn ? : closeModal : null
   }
 
+  // handleDemo(e){
+  //   e.preventDefault();
+  //   this.setState({username: 'Demo', password: 'slimterest'})
+  // }
+
   update(field){
     return e => {
       this.setState({[field]: e.target.value});

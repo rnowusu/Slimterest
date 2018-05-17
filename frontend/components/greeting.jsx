@@ -8,6 +8,7 @@ const Greeting = (props) => {
     props.signout();
     props.openModal('Log in')
   }
+  
   if (props.user){
     return (
       <div>
