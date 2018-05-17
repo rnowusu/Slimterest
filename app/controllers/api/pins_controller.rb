@@ -10,7 +10,7 @@ class Api::PinsController < ApplicationController
     if @pin.save
       render 'api/pins/show'
     else
-      render json: ["You did not put in all of the required fields."]
+      render json: @pin.errors.full_messages # ["You did not put in all of the required fields."]
     end
   end
 
@@ -37,6 +37,6 @@ class Api::PinsController < ApplicationController
   end
 
   def pin_params
-    params.require(:pin).permit(:name, :user_id, :board_id, :category, :description, :website_url)
+    params.require(:pin).permit(:name, :user_id, :board_id, :category, :description, :website_url, :picture)
   end
 end

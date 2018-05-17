@@ -8,16 +8,29 @@ class PinForm extends React.Component {
     this.state = {
       name: "",
       category: "",
-      uploadPicture: null,
-      description: ""
+      description: "",
+      picture: null,
+      pictureUrl: ""
+      // userId: this.props.currentUser
     };
   }
 
   handleSubmit(e){
     e.preventDefault();
-    const pin = merge({}, this.state);
-    this.props.createPin(pin);
-    this.setState({username: "", password: ""})
+    const file = this.state.imageFile;
+    const formData = new FormData();
+    formData.append("pin[name]", this.state.name)
+    formData.append("pin[category]", this.state.category)
+    formData.append("pin[description]", this.state.description)
+    formData.append("pin[picture]", this.state.picture)
+    this.props.createPin(formData);
+
+
+    // const pin = merge({}, this.state);
+    // this.props.createPin(pin);
+    // this.setState({name: "", category: "", description: "", picture: null, pictureUrl: null})
+
+
   }
 
   update(field){
@@ -26,39 +39,56 @@ class PinForm extends React.Component {
     }
   }
 
+  updateFile(e){
+    // debugger
+    const file = e.currentTarget.files[0];
+    let fileReader = new FileReader();
+    fileReader.onloadend = () => {
+      this.setState({picture: file, pictureUrl: fileReader.result});
+    }
+    if (file){
+      fileReader.readAsDataURL(file);
+    } else {
+      this.setState({picture: null, pictureUrl: null})
+    }
+  };
+
   render() {
     return (
       <div className="pin-form">
         <form onSubmit={this.handleSubmit.bind(this)}
           className="pin-form-box">
-          <h3>Create New Pin!</h3>
-          <label>
+          <h3 className ="pin-form-labels pin-create">Create New Pin!</h3>
+          <label className ="pin-form-labels">
             Name <br />
           <input type="text" className="pin-create-attr"
             placeholder="Enter Pin Name"
             onChange={this.update("name")} />
           </label>
           <br />
-          <label>
+          <label className ="pin-form-labels">
             Category <br />
           <input type="text" className="pin-create-attr"
             placeholder="Enter Category Name"
             onChange={this.update("category")} />
           </label>
           <br />
-          <label>
+          <label className ="pin-form-labels">
             Upload Picture <br />
           <input type="file" className="pin-upload-pic"
-              onChange={this.update("uploadPicture")}/>
+              onChange={this.updateFile.bind(this)}/>
           </label>
           <br />
-          <label>
+          <label className ="pin-form-labels">
             Description <br />
           <textarea placeholder ="Enter Pin description"
             className="pin-description" onChange={this.update("description")} />
         </label>
         <br />
           <input type="submit" className="pin-submit-btn" value="Create Your New Pin!"/>
+          <br />
+          <br />
+        <img src={this.state.pictureUrl} className="pin-preview"/>
         </form>
       </div>
     );

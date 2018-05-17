@@ -12,3 +12,55 @@
   /* flex-wrap: wrap; */
 
 }
+
+.pin-form {
+  display: flex;
+  justify-content: center;
+  border: 1px solid #E0E0E0;
+  // height:430px;
+  width: 400px;
+  box-shadow: 1px 1px 1px 1px grey;
+  border-radius: 10px;
+}
+
+.pin-form-labels {
+  text-align: center;
+  color: #555;
+  // -webkit-font-smoothing: antialiased;
+}
+
+.pin-preview {
+  width: 236px;
+  border-radius: 10px;
+  // display: flex;
+}
+
+.pin-create {
+  border-bottom: 1px solid #b5b5b5;
+  width: 100%
+}
+
+.pin-create-attr {
+  width: 100%;
+  height: 30px;
+  border-radius: 4px;
+  font-size: 20px;
+  border: 1px solid #b5b5b5;
+}
+
+.pin-description {
+  width: 100%;
+}
+
+.pin-submit-btn {
+  background-color: #bd081c;
+  color: white;
+  width: 100%;
+  height: 30px;
+  border-radius: 5px;
+  font-size: 20px;
+}
+
+.pin-form-box {
+
+}

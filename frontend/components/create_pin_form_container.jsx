@@ -6,8 +6,8 @@ import { createPin } from '../actions/pin_actions'
 
 const mapStateToProps = (state) => {
   return {
-    formType: 'Create Pin'
-    
+    formType: 'Create Pin',
+    currentUser: state.entities.users[state.session.id]
   };
 };
 

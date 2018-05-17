@@ -12,10 +12,13 @@ export const fetchPin = (id) => {
   });
 };
 
-export const createPin = (pin) => {
+export const createPin = (pin, callback) => {
   return $.ajax({
     method: "POST",
     url: `/api/users/${currentUser.id}/pins`,
-    data: { pin }
+    contentType: false,
+    processData: false,
+    data: { pin }//,
+    //success: () => callback();
   });
 };
