@@ -1,0 +1,14 @@
+.pin-board-modal {
+  position: sticky;
+  right: 10px;
+  top:30px;
+  display: flex;
+}
+
+.fa-plus{
+  font-size:25px;
+  border: 1px solid #555;
+  /* margin: 3px; */
+  padding: 5px;
+  border-radius: 70px;
+}

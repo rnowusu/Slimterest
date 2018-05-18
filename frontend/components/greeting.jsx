@@ -8,7 +8,7 @@ const Greeting = (props) => {
     props.signout();
     props.openModal('Log in')
   }
-  
+
   if (props.user){
     return (
       <div>
@@ -32,6 +32,7 @@ const Greeting = (props) => {
         <h3>Welcome, {props.user.username}</h3>
           <ProtectedRoute exact path='/' component={PinIndexContainer} />
         <button onClick={handleSignOut}>Sign Out</button>
+        <div className="pin-board-modal"><i className="fas fa-plus"></i></div>
       </div>
     );
   }
