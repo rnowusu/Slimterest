@@ -1,3 +1,44 @@
 // Place all the styles related to the api/boards controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.board-form{
+  // display: flex;
+  // justify-content: center;
+   // flex-direction: column;
+  border: 1px solid #E0E0E0;
+  border-radius: 5px;
+  height: 215px;
+  width: 400px;
+  box-shadow: 1px 1px 1px 1px grey;
+}
+
+.board-name {
+  width: 60%;
+  height: 30px;
+  border-radius: 30px;
+  font-size: 20px;
+  border: 1px solid #b5b5b5;
+
+}
+
+.board-form-labels {
+  margin-right: 10px;
+  text-align: center;
+  color: #555;
+  margin-left: 10px;
+  // border-bottom: 1px solid #b5b5b5;
+}
+
+.board-header {
+  text-align: center;
+  color: #555;
+  border-bottom: 1px solid #b5b5b5;
+  width: 100%;
+}
+
+.board-buttons {
+  // justify-content: right;
+  float:right;
+  margin-right: 10px;
+}

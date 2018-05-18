@@ -13,3 +13,7 @@
  *= require_tree .
  *= require_self
  */
+.rendered {
+  float: right;
+  /* margin-bottom: 140px; */
+}

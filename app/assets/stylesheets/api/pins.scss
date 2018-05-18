@@ -5,6 +5,8 @@
   display: flex;
   flex-wrap: wrap;
   list-style-type: none;
+  // flex-direction: row;
+  column-fill: balance;
 }
 
 .pin-img {
@@ -33,7 +35,7 @@
 
 .pin-preview {
   width: 236px;
-  border-radius: 10px;
+  border-radius: 30px;
   // display: flex;
 }
 
@@ -54,6 +56,10 @@
   width: 100%;
 }
 
+.pin-description-item {
+  width: 100%;
+}
+
 .pin-submit-btn {
   background-color: #bd081c;
   color: white;
@@ -71,7 +77,9 @@
   // display: flex;
   // margin: auto;
   justify-content: center;
+  text-overflow: hidden
 }
+
 
 .pin:hover {
   background-color: rgba(0, 0, 0, 0.05);

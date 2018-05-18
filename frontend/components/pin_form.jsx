@@ -28,7 +28,11 @@ class PinForm extends React.Component {
     formData.append("pin[board_id]", this.state.boardId)
     // debugger
     this.props.createPin(formData);
-
+    this.setState({
+      name: "", category: "", description: "",
+      picture: null, pictureUrl: "", userId: null,
+      boardId: 1
+  })
 
     // const pin = merge({}, this.state);
     // this.props.createPin(pin);
@@ -59,7 +63,7 @@ class PinForm extends React.Component {
 
   render() {
     return (
-      <div className="pin-form">
+      <div className="pin-form rendered">
         <form onSubmit={this.handleSubmit.bind(this)}
           className="pin-form-box">
           <h3 className ="pin-form-labels pin-create">Create New Pin!</h3>

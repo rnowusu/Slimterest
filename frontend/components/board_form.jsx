@@ -12,27 +12,52 @@ class BoardForm extends React.Component {
     };
   }
 
+  updateName(e){
+    this.setState({});
+  }
+
+  updateSecretStatus(e){
+
+  }
+
+  handleSubmit(e){
+    e.preventDefault();
+  }
+
+
+
   render() {
     return (
-      <div>
-        <form>
-          <h3>Create Board!</h3>
+      <div className="rendered">
+        <form onSubmit={this.handleSubmit}
+          className="board-form">
+          <h3 className="board-header">Create Board!</h3>
 
           <label className="board-form-labels">
-            Name: <br />
-          <input type="text" />
+            Name: &nbsp;
+          <input type="text" className="board-name"
+            onChange={this.updateName.bind(this)} />
           </label>
-          <br />
+          <br /> <br /> <br />
 
           <label className="board-form-labels">
             Secret Status: &nbsp;
+
             <input type="radio" name="secret-status"
-              value="true" /> True &nbsp;
+              value="true" onChange={this.updateSecretStatus.bind(this)} /> True &nbsp;
+
             <input type="radio" name="secret-status"
-              value="false" checked /> False &nbsp;
+              value="false" onChange={this.updateSecretStatus.bind(this)} checked /> False &nbsp;
+
           </label>
-          <br />
-          <input type="submit" value="Create Board"/>
+          <br /> <br /> <br />
+
+          <input type="submit" value="Cancel" className="board-buttons"
+            onClick={this.handleSubmit}/>
+          &nbsp;
+          <input type="submit" value="Create Board" className="board-buttons"
+            />
+
 
         </form>
       </div>
