@@ -1,24 +1,8 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Web App
 
-Things you may want to cover:
+This app is deigned to be a social media site primarily focused on sharing pictures. Users can create an account, log in, create Pins and boards, and can add names, categories and descriptions
+https://slimterest.herokuapp.com/#/
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+This app was built on a back end of Ruby on Rails, with a front end built with React.js and with the Redux implementation of Flux methodology. Amazon Web Services was used in order to host images uploaded to the application, and the application itself is hosted on herokuapp.
