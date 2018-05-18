@@ -6,7 +6,7 @@ class Api::UsersController < ApplicationController
       render "api/users/show"
 
     else
-      render json: ["Invalid username or password"], status: 401
+      render json: ["No user found."], status: 401
     end
   end
 

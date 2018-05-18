@@ -1,5 +1,6 @@
 import { connect } from 'react-redux';
 import { createBoard } from '../actions/board_actions';
+import BoardForm from './board_form'
 
 const mapStateToProps = (state) => {
   return {
@@ -12,3 +13,5 @@ const mapDispatchToProps = (dispatch) => {
     createBoard: (board) => dispatch(receiveBoard(board))
   };
 }
+
+export default connect(mapStateToProps, mapDispatchToProps)(BoardForm);

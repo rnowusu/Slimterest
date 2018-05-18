@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import PinForm from './pin_form';
-import { createPin } from '../actions/pin_actions'
+import { createPin } from '../actions/pin_actions';
 // import { login } from '../actions/session_actions';
 
 const mapStateToProps = (state) => {

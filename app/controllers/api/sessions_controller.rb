@@ -9,7 +9,7 @@ class Api::SessionsController < ApplicationController
       render "api/users/show"
       # render user show page api/users.show
     else
-      render json: ["no user found"], status: 422 #json: @user.errors.full_messages
+      render json: ["Invalid username or password."], status: 422 #json: @user.errors.full_messages
     end
   end
 
