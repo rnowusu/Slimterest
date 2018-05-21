@@ -34,6 +34,7 @@ class PinForm extends React.Component {
       boardId: 1
   })
 
+    // this.props.history.push('/');
     // const pin = merge({}, this.state);
     // this.props.createPin(pin);
     // this.setState({name: "", category: "", description: "", picture: null, pictureUrl: null})

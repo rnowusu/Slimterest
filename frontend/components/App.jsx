@@ -16,8 +16,7 @@ const App = () => {
 
       <header>
         <GreetingContainer />
-        <PinFormContainer />
-        <BoardFormContainer />
+
       </header>
       <AuthRoute exact path='/' component={Modal} />
       <AuthRoute exact path='/login' component={Modal} />
