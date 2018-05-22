@@ -9,6 +9,7 @@ import Modal from './modal';
 import PinIndexContainer from './pin_index_container';
 import PinFormContainer from './create_pin_form_container';
 import BoardFormContainer from './board_form_container';
+import ItemModal from './item_modal';
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
 
       <header>
         <GreetingContainer />
+        <ItemModal />
 
       </header>
       <AuthRoute exact path='/' component={Modal} />

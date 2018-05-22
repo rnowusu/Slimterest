@@ -6,6 +6,7 @@ import { signup, login, signout } from './actions/session_actions';
 import { fetchPins, fetchPin, createPin } from './actions/pin_actions';
 import { createBoard, fetchBoard, fetchBoards } from './actions/board_actions';
 // import * as SessionApiUtil from './util/session_api_util';
+import { openItemModal, closeItemModal } from './actions/item_modal_actions';
 
 document.addEventListener('DOMContentLoaded', () => {
   let store
