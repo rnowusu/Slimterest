@@ -2,7 +2,10 @@
   position: sticky;
   right: 10px;
   top:30px;
-  display: flex;
+  /* display: flex; */
+  /* float: right; */
+  /* text-align: center;  */
+  text-align: right;
 }
 
 .fa-plus{

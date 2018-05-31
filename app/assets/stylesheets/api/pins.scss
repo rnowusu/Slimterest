@@ -7,6 +7,13 @@
   list-style-type: none;
   // flex-direction: row;
   column-fill: balance;
+  color: #555;
+  font-family: "Helvetica Neue";
+}
+.text{
+  color: #555;
+  font-family: "Helvetica Neue";
+
 }
 
 .pin-img {
@@ -76,8 +83,10 @@
 .pin {
   // display: flex;
   // margin: auto;
-  justify-content: center;
-  text-overflow: hidden
+  // justify-content: center;
+  text-overflow: hidden;
+  width: 290px;
+  text-align: center;
 }
 
 

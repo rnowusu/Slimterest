@@ -29,10 +29,10 @@ const Greeting = (props) => {
           <li className="header-comment"><i className="fas fa-comment-dots" /></li>
           <li className="header-extra"><i className="fas fa-ellipsis-h" /></li>
         </ul>
-        <h3>Welcome, {props.user.username}</h3>
+        <h3 className="text">Welcome, {props.user.username}</h3>
           <ProtectedRoute exact path='/' component={PinIndexContainer} />
         <button onClick={handleSignOut}>Sign Out</button>
-        <div className="pin-board-modal"><i className="fas fa-plus"></i></div>
+        
       </div>
     );
   }
