@@ -20,14 +20,14 @@ class PinIndex extends React.Component{
         <img className="pin-img" src={pin.picture_url}/> <br/>
           {pin.name} <br/>
           {pin.description} <br/>
-        {pin.category}
+          <br/>
         </li>
       );
     })
     return (
       <div>
         <ul className="pins">{pins}</ul>
-        <div className="pin-board-modal" ><i className="fas fa-plus" onClick={this.props.openItemModal.bind(this)}></i></div>
+        <i className="fas fa-plus pin-board-modal" onClick={this.props.openItemModal.bind(this)}></i>
       </div>
     );
   }

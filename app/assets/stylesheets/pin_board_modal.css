@@ -1,17 +1,18 @@
 .pin-board-modal {
   position: sticky;
-  right: 10px;
-  top:30px;
-  /* display: flex; */
-  /* float: right; */
-  /* text-align: center;  */
-  text-align: right;
+  right: 40px;
+  bottom: 30px;
+  background-color: white;
+  color: #555;
+  float: right;
+
 }
 
 .fa-plus{
   font-size:25px;
-  border: 1px solid #555;
+  /* border: 1px solid #555; */
   /* margin: 3px; */
   padding: 5px;
+  box-shadow: 1px 1px 1px;
   border-radius: 70px;
 }
