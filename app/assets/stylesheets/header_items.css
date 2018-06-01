@@ -14,7 +14,7 @@
   list-style-type: none;
   display: flex;
   border-bottom: 1px solid #ccc;
-  padding-bottom: 10px;
+  padding-bottom: 5px;
   padding-top: 4px;
   justify-content: space-between;
   width: 103%;
@@ -29,8 +29,9 @@
 .header-logo {
 font-size: 25px;
 color:#b5b5b5;
-padding-left: 7px;
-padding-right: 7px;
+padding-top: 5px;
+padding-left: 5px;
+padding-right: 5px;
 }
 
 .logo-svg{
@@ -43,6 +44,7 @@ color:#555;
 background-color: #b5b5b5;
 border-radius: 7px;
 width: 40%;
+height: 100%;
 }
 
 .header-search-box {
@@ -58,80 +60,80 @@ width: 40%;
 font-size: 25px;
 color:#b5b5b5;
 padding-top: 7px;
-padding-left: 7px;
-padding-right: 7px;
+padding-left: 15px;
+padding-right: 15px;
 }
 
 .header-explore {
 font-size: 25px;
 color:#b5b5b5;
 padding-top: 7px;
-padding-left: 7px;
-padding-right: 7px;
+padding-left: 15px;
+padding-right: 15px;
 }
 
 .header-username {
 font-size: 25px;
 color:#b5b5b5;
 padding-top: 7px;
-padding-left: 7px;
-padding-right: 7px;
+padding-left: 15px;
+padding-right: 15px;
 }
 
 .header-comment {
 font-size: 25px;
 color:#b5b5b5;
-padding-top: 7px;
-padding-left: 7px;
-padding-right: 7px;
+padding-top: 9px;
+padding-left: 15px;
+padding-right: 15px;
 }
 
 .header-extra {
 font-size: 25px;
 color:#b5b5b5;
 margin-right: 100px;
-padding-right: 7px;
 padding-top: 7px;
-padding-left: 7px;
+padding-right: 15px;
+padding-left: 15px;
 }
 
 .header-logo:hover {
  background-color: rgba(0, 0, 0, 0.05);
- border-radius: 5px;
+ border-radius: 25px;
  cursor: pointer;
 }
 /* .header-search:hover {
  background-color: rgba(0, 0, 0, 0.05);
  border-radius: 5px;
  cursor: pointer;
-}
-.header-search-box:hover {
+} */
+/* .header-search-box:hover {
  background-color: rgba(0, 0, 0, 0.05);
  border-radius: 5px;
  cursor: pointer;
 } */
 .header-home-btn:hover {
  background-color: rgba(0, 0, 0, 0.05);
- border-radius: 5px;
+ border-radius: 25px;
  cursor: pointer;
 }
 .header-explore:hover {
  background-color: rgba(0, 0, 0, 0.05);
- border-radius: 5px;
+ border-radius: 25px;
  cursor: pointer;
 }
 .header-username:hover {
  background-color: rgba(0, 0, 0, 0.05);
- border-radius: 5px;
+ border-radius: 25px;
  cursor: pointer;
 }
 .header-comment:hover {
  background-color: rgba(0, 0, 0, 0.05);
- border-radius: 5px;
+ border-radius: 25px;
  cursor: pointer;
 }
 .header-extra:hover {
  background-color: rgba(0, 0, 0, 0.05);
- border-radius: 5px;
+ border-radius: 25px;
  cursor: pointer;
 }
