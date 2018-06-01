@@ -67,8 +67,6 @@ class SessionForm extends React.Component {
               <img className="logo-svg-modal" src='http://www.clker.com/cliparts/g/d/D/A/l/9/sl-logo.svg.thumb.png' alt='Sl Logo clip art'/></a>
             <h2 className="session-form-headers">Welcome to Slimterest!</h2>
             <h3 className="session-form-headers">{this.props.formType}</h3>
-            Please {this.props.formType} or {this.props.otherForm}.
-            <br/>
             <div onClick={this.props.closeModal}
               className='close-x' >X</div>
             <ul className="errors">
@@ -95,6 +93,8 @@ class SessionForm extends React.Component {
             <br/>
             <br />
             <input className="session-submit" type="submit" value={this.props.formType} />
+            <br/><br/>
+            Please {this.props.formType} or {this.props.otherForm}.
           </div>
           </form>
 
