@@ -10,7 +10,8 @@ import PinIndexContainer from './pin_index_container';
 import PinFormContainer from './create_pin_form_container';
 import BoardFormContainer from './board_form_container';
 import ItemModal from './item_modal';
-import Click_Dropdown from './click_drop_down_container';
+import ClickDropdown from './click_drop_down_container';
+import MenuItems from './menu_items';
 
 const App = () => {
   return (
@@ -19,7 +20,7 @@ const App = () => {
       <header>
         <GreetingContainer />
         <ItemModal />
-        <Click_Dropdown />
+        <MenuItems />
 
       </header>
       <AuthRoute exact path='/' component={Modal} />

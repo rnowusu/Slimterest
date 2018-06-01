@@ -27,7 +27,7 @@ class PinIndex extends React.Component{
     return (
       <div>
         <ul className="pins">{pins}</ul>
-        <i className="fas fa-plus pin-board-modal" onClick={this.props.openItemModal.bind(this)}></i>
+        <i className="fas fa-plus pin-board-modal" onClick={this.props.openMenu.bind(this)}></i>
       </div>
     );
   }

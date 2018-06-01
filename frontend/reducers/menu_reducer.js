@@ -10,11 +10,11 @@ const menuReducer = (state = null, action) => {
     return newState;
 
     case CLOSE_MENU:
-    newState = state;
+    newState = null;
     return newState;
 
     default:
-    return state;
+    return null;
   }
 }
 
