@@ -8,6 +8,10 @@ class PinIndex extends React.Component{
 
   }
 
+  handleClick() {
+    this.props.menuType ? this.props.closeMenu() : this.props.openMenu()
+  }
+
   componentDidMount(){
     this.props.fetchPins();
   }
@@ -27,10 +31,14 @@ class PinIndex extends React.Component{
     return (
       <div>
         <ul className="pins">{pins}</ul>
-        <i className="fas fa-plus pin-board-modal" onClick={this.props.openMenu.bind(this)}></i>
+        <i className="fas fa-plus pin-board-modal"
+          onClick={this.handleClick.bind(this)}></i>
       </div>
     );
   }
 }
 
 export default PinIndex;
+
+// !this.props.menuType === 'Side Drop Down' ?  this.props.openMenu.bind(this)
+// : this.props.closeMenu.bind(this)

@@ -32,7 +32,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    openMenu: (menuType) => dispatch(openMenu(menuType)),
+    openMenu: () => dispatch(openMenu("Side Drop Down")),
     closeMenu: () => dispatch(closeMenu())
   };
 }

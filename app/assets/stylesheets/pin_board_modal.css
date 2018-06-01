@@ -7,6 +7,12 @@
   float: right;
 
 }
+.pin-board-modal:hover {
+  background-color: #E0E0E0;
+}
+.pin-board-modal:active {
+  background-color: #c2c2d6;
+}
 
 .fa-plus{
   font-size:25px;
@@ -64,6 +70,11 @@
 .dropdown-li:hover {
   background-color: #E0E0E0;
   height: 50%;
+
+}
+.dropdown-li:active {
+  background-color: white;
+  /* #d1d1e0; */
 
 }
 
