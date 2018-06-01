@@ -14,6 +14,16 @@ class SessionForm extends React.Component {
     };
   }
 
+  demoLogin(e){
+    e.preventDefault();
+    let userName = "Demo";
+    let password = "slimterest";
+
+    for (let j = 1; j <= password.length; j++){
+        setTimeout(() => {this.setState({username:"Demo", password: password.slice(0, j)});}, 100*j);
+    }
+  }
+
   handleSubmit(e){
     e.preventDefault();
     const user = merge({}, this.state)
@@ -93,4 +103,7 @@ class SessionForm extends React.Component {
   }
 }
 
+// document.getElementsByClassName("login-input")[0].value="Demo"
+// document.getElementsByClassName("login-input")[1].value="slimterest"
+// document.getElementsByClassName("session-submit")[0].click()
 export default withRouter(SessionForm);

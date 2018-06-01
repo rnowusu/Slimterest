@@ -14,7 +14,7 @@ for (let i = a.length - 1; i > 0; i--) {
 
 const mapStateToProps = (state) => {
   return {
-    pins: shuffle(Object.values(state.entities.pins)),
+    pins: Object.values(state.entities.pins),
     menuType: state.ui.menu
   };
 };
