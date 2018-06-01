@@ -17,6 +17,7 @@ class PinIndex extends React.Component{
   }
 
   render(){
+    window.props = this.props
     const pins = this.props.pins.map((pin) => {
       return (
         <li key={pin.id} className="pin">

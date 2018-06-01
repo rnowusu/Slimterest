@@ -15,6 +15,7 @@
   display: flex;
   border-bottom: 1px solid #ccc;
   padding-bottom: 10px;
+  padding-top: 4px;
   justify-content: space-between;
   width: 103%;
   margin-left: -10px;
@@ -28,6 +29,8 @@
 .header-logo {
 font-size: 25px;
 color:#b5b5b5;
+padding-left: 7px;
+padding-right: 7px;
 }
 
 .logo-svg{
@@ -48,32 +51,48 @@ width: 40%;
   background-color: #b5b5b5;
   border: none;
   border-radius: 7px;
+  /* padding-top: 7px; */
 }
 
 .header-home-btn {
 font-size: 25px;
 color:#b5b5b5;
+padding-top: 7px;
+padding-left: 7px;
+padding-right: 7px;
 }
 
 .header-explore {
 font-size: 25px;
 color:#b5b5b5;
+padding-top: 7px;
+padding-left: 7px;
+padding-right: 7px;
 }
 
 .header-username {
 font-size: 25px;
 color:#b5b5b5;
+padding-top: 7px;
+padding-left: 7px;
+padding-right: 7px;
 }
 
 .header-comment {
 font-size: 25px;
 color:#b5b5b5;
+padding-top: 7px;
+padding-left: 7px;
+padding-right: 7px;
 }
 
 .header-extra {
 font-size: 25px;
 color:#b5b5b5;
-padding-right: 100px;
+margin-right: 100px;
+padding-right: 7px;
+padding-top: 7px;
+padding-left: 7px;
 }
 
 .header-logo:hover {
@@ -81,7 +100,7 @@ padding-right: 100px;
  border-radius: 5px;
  cursor: pointer;
 }
-.header-search:hover {
+/* .header-search:hover {
  background-color: rgba(0, 0, 0, 0.05);
  border-radius: 5px;
  cursor: pointer;
@@ -90,7 +109,7 @@ padding-right: 100px;
  background-color: rgba(0, 0, 0, 0.05);
  border-radius: 5px;
  cursor: pointer;
-}
+} */
 .header-home-btn:hover {
  background-color: rgba(0, 0, 0, 0.05);
  border-radius: 5px;
