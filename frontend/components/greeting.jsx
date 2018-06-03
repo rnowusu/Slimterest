@@ -14,8 +14,8 @@ const Greeting = (props) => {
       <div>
         <ul className="header-items">
           <li className="header-logo">
-            <a href="/">
-              <img className="logo-svg" src='http://www.clker.com/cliparts/g/d/D/A/l/9/sl-logo.svg.thumb.png' alt='Sl Logo clip art'/></a>
+            <Link to="/">
+              <img className="logo-svg" src='http://www.clker.com/cliparts/g/d/D/A/l/9/sl-logo.svg.thumb.png' alt='Sl Logo clip art'/></Link>
               </li>
           <li className="header-search">&nbsp;<i className="fas fa-search" />
           <input type="text" className="header-search-box"

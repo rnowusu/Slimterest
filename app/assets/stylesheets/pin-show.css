@@ -1,0 +1,47 @@
+.pin-show {
+  /* justify-content: center; */
+  /* text-align: center; */
+  background-color: #efeff5;
+
+}
+
+.pin-show-ul {
+  display: flex;
+  flex: wrap;
+  border: 1px solid #E0E0E0;
+  border-radius: 5px;
+  width: 70%;
+  margin: auto;
+  background-color: white;
+  padding:15px;
+}
+.pin-show-li {
+  list-style-type: none;
+  width: 50%;
+  color: #555;
+  font-family: "Helvetica-Neue";
+  font-size: 30px;
+  text-align: center;
+  /* padding: 15px; */
+  /* margin: 5px; */
+}
+
+.pin-show-li:first-of-type:hover {
+}
+
+.pin-show-img {
+  width:90%;
+  border-radius: 5px;
+  padding: 15px;
+}
+
+.pin-show-img:hover {
+  background-color: #E0E0E0;
+  padding: 15px;
+  opacity: .9;
+  /* rgba(0,0,0,0.5) */
+}
+
+.pin-show-li-div {
+  border-bottom: 1px solid #eee;
+}

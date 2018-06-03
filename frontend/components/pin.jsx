@@ -9,16 +9,38 @@ class Pin extends React.Component{
 
   componentDidMount(){
     // this.props.id
-    // this.props.fetchPin(8)
+    // this.props.fetchPin(this.props.match.params.pinId)
   }
 
   render(){
     window.propsPin = this.props;
     return (
-      <div>
-        {this.props.pin.name} <br /> <br />
-      <img className="pin-show-img" src={this.props.pin.picture_url}/> <br />
-      {this.props.pin.description}
+      <div className="pin-show">
+        <div><br />&nbsp; &nbsp;
+          <button onClick={() =>this.props.history.push("/")}>
+            Go back
+          </button>
+        </div>
+        <ul className="pin-show-ul">
+          <li className="pin-show-li">
+            <div>
+              <img className="pin-show-img" src={this.props.pin.picture_url}/> <br />
+            </div>
+          </li>
+          <li className="pin-show-li">
+            <div className="pin-show-li-div">
+              <br />
+              {this.props.pin.name}
+              <br /> <br />
+            </div>
+            <div className="pin-show-li-div">
+              <br />
+              {this.props.pin.description}
+              <br /><br />
+            </div>
+          </li>
+        </ul>
+        <br /> <br />
       </div>
     );
   }
