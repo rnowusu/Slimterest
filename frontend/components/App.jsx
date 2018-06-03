@@ -22,6 +22,7 @@ const App = () => {
         <ProtectedRoute path='/' component={GreetingContainer} />
         <ItemModal />
         <ProtectedRoute path='/' component={MenuItems} />
+        <ProtectedRoute path='/pins/:pinId' component={Pin} />
 
       </header>
       <AuthRoute exact path='/' component={Modal} />

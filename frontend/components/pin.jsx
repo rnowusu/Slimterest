@@ -15,7 +15,11 @@ class Pin extends React.Component{
   render(){
     window.propsPin = this.props;
     return (
-      <p>My Pin</p>
+      <div>
+        {this.props.pin.name} <br /> <br />
+      <img className="pin-show-img" src={this.props.pin.picture_url}/> <br />
+      {this.props.pin.description}
+      </div>
     );
   }
 
@@ -23,9 +27,9 @@ class Pin extends React.Component{
 
 const mapStateToProps = (state, ownProps) => {
   return {
-    pin: state.entities.pins[8],
-    ownProps: ownProps,
-    state: state
+    pin: state.entities.pins[ownProps.match.params.pinId],
+    // ownProps: ownProps,
+    // state: state
   };
 };
 

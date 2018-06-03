@@ -47,7 +47,6 @@ class PinIndex extends React.Component{
     return (
       <div>
         <ul className="pins">{pins}</ul>
-        <ProtectedRoute path={`/`} component={Pin} />
         <i className="fas fa-plus pin-board-modal"
           onClick={this.handleMenuClick.bind(this)}></i>
       </div>
