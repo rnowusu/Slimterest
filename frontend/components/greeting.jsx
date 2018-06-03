@@ -14,7 +14,7 @@ const Greeting = (props) => {
       <div>
         <ul className="header-items">
           <li className="header-logo">
-            <a href="http://www.clker.com/cliparts/g/d/D/A/l/9/sl-logo.svg.thumb.png">
+            <a href="/">
               <img className="logo-svg" src='http://www.clker.com/cliparts/g/d/D/A/l/9/sl-logo.svg.thumb.png' alt='Sl Logo clip art'/></a>
               </li>
           <li className="header-search">&nbsp;<i className="fas fa-search" />
@@ -32,7 +32,7 @@ const Greeting = (props) => {
         <h3 className="text">Welcome, {props.user.username}</h3>
           <ProtectedRoute exact path='/' component={PinIndexContainer} />
         <button onClick={handleSignOut}>Sign Out</button>
-        
+
       </div>
     );
   }

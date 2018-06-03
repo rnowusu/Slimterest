@@ -12,15 +12,16 @@ import BoardFormContainer from './board_form_container';
 import ItemModal from './item_modal';
 import ClickDropdown from './click_drop_down_container';
 import MenuItems from './menu_items';
+import Pin from './pin';
 
 const App = () => {
   return (
     <div>
 
       <header>
-        <GreetingContainer />
+        <ProtectedRoute path='/' component={GreetingContainer} />
         <ItemModal />
-        <MenuItems />
+        <ProtectedRoute path='/' component={MenuItems} />
 
       </header>
       <AuthRoute exact path='/' component={Modal} />

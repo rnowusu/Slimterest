@@ -1,6 +1,10 @@
 import React from 'react';
 import PinIndexItem from './pin_index_item';
 import { openItemModal, closeItemModal } from '../actions/item_modal_actions';
+import Pin from './pin'
+import { ProtectedRoute } from '../util/route_util';
+import { Redirect, Link } from 'react-router-dom';
+
 
 class PinIndex extends React.Component{
   constructor(props){
@@ -8,19 +12,30 @@ class PinIndex extends React.Component{
 
   }
 
-  handleClick() {
+  handleMenuClick() {
     this.props.menuType ? this.props.closeMenu() : this.props.openMenu()
   }
 
-  componentDidMount(){
+  handlePinClick(pin){
+    this.props.history.push(`/pins/${pin.id}`);
+    return (<ProtectedRoute path={`/pins/${pin.id}`} component={Pin} />);
+  }
+
+  componentWillMount(){
     this.props.fetchPins();
   }
 
+  componentWillUnmount(){
+    // this.props.clearPins();
+  }
+
   render(){
-    window.props = this.props
+    window.propsIndex = this.props
+    // `/pins/${pin.id}`
     const pins = this.props.pins.map((pin) => {
       return (
-        <li key={pin.id} className="pin">
+        <li key={pin.id} className="pin"
+          onClick={() => this.handlePinClick(pin)}>
           <br/>
         <img className="pin-img" src={pin.picture_url}/> <br/>
           {pin.name} <br/>
@@ -32,8 +47,9 @@ class PinIndex extends React.Component{
     return (
       <div>
         <ul className="pins">{pins}</ul>
+        <ProtectedRoute path={`/`} component={Pin} />
         <i className="fas fa-plus pin-board-modal"
-          onClick={this.handleClick.bind(this)}></i>
+          onClick={this.handleMenuClick.bind(this)}></i>
       </div>
     );
   }

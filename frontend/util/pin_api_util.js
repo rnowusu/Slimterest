@@ -8,7 +8,7 @@ export const fetchPins = () => {
 export const fetchPin = (id) => {
   return $.ajax({
     method: "GET",
-    url:`/api/users/${currentUser.id}/pins/${id}`
+    url:`/api/pins/${id}`
   });
 };
 

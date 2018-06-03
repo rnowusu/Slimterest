@@ -4,6 +4,7 @@ import * as PinApiUtil from '../util/pin_api_util';
 
 export const RECEIVE_PINS = "RECEIVE_PINS";
 export const RECEIVE_PIN = "RECEIVE_PIN";
+export const CLEAR_PINS = "CLEAR_PINS"
 
 export const receivePins = (pins) => {
   return {
@@ -16,6 +17,12 @@ export const receivePin = (pin) => {
   return {
     type: RECEIVE_PIN,
     pin: pin
+  };
+};
+
+export const clearPins = () => {
+  return {
+    type: CLEAR_PINS
   };
 };
 
