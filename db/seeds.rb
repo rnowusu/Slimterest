@@ -7,9 +7,6 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 #User.new({username: "Ryan", password_digest: BCrypt::Password.create("slimterest"), session_token: SecureRandom.urlsafe_base64(16)})
 
-  # User.all.each_with_index do |user, idx|
-  #   Board.create([{name: "#{user.username} Test Board 1", secret_status: false, user_id: user.id}])
-  # end
 
   # Pin.create([{name: "Test Pin", description: "Does this work?", category: 'Test' , user_id: 23, board_id: 2, picture: 'http://s3.us-east-2.amazonaws.com/slimterestpics-dev/pins/pictures/000/000/008/original/Ghana_jollof.jpg?1526608667'}])
 
@@ -18,7 +15,12 @@
   # User.new({username: "Malik", password: "slimterest"});
   # User.new({username: "Quinton", password: "slimterest"});
   # User.new({username: "Dhara", password: "slimterest"});
+  # User.new({username: "Demo", password: "slimterest"});
 
+  # User.all.each_with_index do |user, idx|
+  #   Board.create([{name: "#{user.username} Test Board 1", secret_status: false, user_id: user.id}])
+  # end
+  
   # Board.create([{name: "Board 1", user_id: User.first}])
   #
   # Pin.create([{name: 'Berries', category: 'Food' , description: "", user_id: 23, board_id: 2, picture: 'https://s3.us-east-2.amazonaws.com/slimterestpics-pro/slimterest+pics/food-fruit-raspberries-strawberry-fruit.jpg'}])

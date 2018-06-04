@@ -1,5 +1,5 @@
 import React from 'react';
-import { fetchPin } from '../actions/pin_actions';
+import { fetchPin, fetchPins } from '../actions/pin_actions';
 import { connect } from 'react-redux';
 
 class Pin extends React.Component{
@@ -8,6 +8,7 @@ class Pin extends React.Component{
   }
 
   componentWillMount(){
+    this.props.fetchPins();
     // this.props.id
     // this.props.fetchPin(this.props.match.params.pinId)
     // this.props.pin = this.props.pin ||fetchPin(this.props.match.params.pinId);
@@ -58,7 +59,8 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    fetchPin: (id) => dispatch(fetchPin(id))
+    fetchPin: (id) => dispatch(fetchPin(id)),
+    fetchPins: () => dispatch(fetchPins())
   };
 };
 

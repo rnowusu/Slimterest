@@ -7,8 +7,8 @@ class BoardForm extends React.Component {
     super(props)
     this.state = {
       name: "",
-      secret_status: "",
-      user_id: this.props.currentUser.id //|| 23
+      user_id: this.props.currentUser.id, //|| 23
+      secret_status: false
     };
   }
 
@@ -22,14 +22,19 @@ class BoardForm extends React.Component {
 
   handleSubmit(e){
     e.preventDefault();
+    // debugger
+    if (document.getElementById("radio-true").checked === true){
+      this.setState({secret_status: true})//.bind(this)
+    }
+    const board = merge({}, this.state);
+    this.props.createBoard({board: board});
   }
-
 
 
   render() {
     return (
       <div className="rendered">
-        <form onSubmit={this.handleSubmit}
+        <form onSubmit={this.handleSubmit.bind(this)}
           className="board-form">
           <h3 className="board-header">Create Board!</h3>
 
@@ -43,17 +48,16 @@ class BoardForm extends React.Component {
           <label className="board-form-labels">
             Secret Status: &nbsp;
 
-            <input type="radio" name="secret-status"
+            <input id="radio-true" type="radio" name="secret-status"
               value="true" onChange={this.updateSecretStatus.bind(this)} /> True &nbsp;
 
-            <input type="radio" name="secret-status"
+            <input id="radio-false" type="radio" name="secret-status"
               value="false" onChange={this.updateSecretStatus.bind(this)} checked /> False &nbsp;
 
           </label>
           <br /> <br /> <br />
 
-          <input type="submit" value="Cancel" className="board-buttons"
-            onClick={this.handleSubmit}/>
+          <input type="button" value="Cancel" className="board-buttons"/>
           &nbsp;
           <input type="submit" value="Create Board" className="board-buttons"
             />

@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { createBoard } from '../actions/board_actions';
+import { receiveBoard, createBoard } from '../actions/board_actions';
 import BoardForm from './board_form'
 
 const mapStateToProps = (state) => {
@@ -10,7 +10,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    createBoard: (board) => dispatch(receiveBoard(board))
+    createBoard: (board) => dispatch(createBoard(board))
   };
 }
 
