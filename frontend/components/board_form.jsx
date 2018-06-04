@@ -8,12 +8,12 @@ class BoardForm extends React.Component {
     this.state = {
       name: "",
       secret_status: "",
-      user_id: null  //this.props.currentuser.id || 23
+      user_id: this.props.currentUser.id //|| 23
     };
   }
 
   updateName(e){
-    this.setState({});
+    this.setState({name: e.target.value});
   }
 
   updateSecretStatus(e){

@@ -16,7 +16,7 @@ class Click_Dropdown extends React.Component {
 
           <li className="dropdown-li"
             onClick={() => this.props.openBoardForm('Board Form')}>
-            <i className="fas fa-plus fa-drop"></i> &nbsp;Create Form
+            <i className="fas fa-plus fa-drop"></i> &nbsp;Create Board
           </li>
         </ul>
     );
