@@ -120,23 +120,57 @@ padding-left: 15px;
  border-radius: 25px;
  cursor: pointer;
 }
+
 .header-explore:hover {
  background-color: rgba(0, 0, 0, 0.05);
  border-radius: 25px;
  cursor: pointer;
 }
+
 .header-username:hover {
  background-color: rgba(0, 0, 0, 0.05);
  border-radius: 25px;
  cursor: pointer;
 }
+
 .header-comment:hover {
  background-color: rgba(0, 0, 0, 0.05);
  border-radius: 25px;
  cursor: pointer;
 }
+
 .header-extra:hover {
  background-color: rgba(0, 0, 0, 0.05);
  border-radius: 25px;
  cursor: pointer;
+}
+
+.header-logo:active {
+  background-color: #c2c2d6;
+  color: white;
+}
+
+.header-home-btn:active {
+  background-color: #c2c2d6;
+  color: white;
+}
+
+.header-explore:active {
+  background-color: #c2c2d6;
+  color: white;
+}
+
+.header-username:active {
+  background-color: #c2c2d6;
+  color: white;
+}
+
+.header-comment:active {
+  background-color: #c2c2d6;
+  color: white;
+}
+
+.header-extra:active {
+  background-color: #c2c2d6;
+  color: white;
 }

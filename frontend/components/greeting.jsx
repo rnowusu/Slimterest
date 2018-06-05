@@ -3,6 +3,8 @@ import GreetingContainer from './greeting';
 import { Link } from 'react-router-dom';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import PinIndexContainer from './pin_index_container';
+import HeaderDropdown from './header_dropdown'
+
 const Greeting = (props) => {
   const handleSignOut = () => {
     props.signout();
@@ -27,12 +29,13 @@ const Greeting = (props) => {
           &nbsp;{props.user.username}
           </li>
           <li className="header-comment"><i className="fas fa-comment-dots" /></li>
-          <li className="header-extra"><i className="fas fa-ellipsis-h" /></li>
+          <li className="header-extra" onClick={() => props.menuType ? props.closeMenu() : props.openMenu("Menu Drop Down")}>
+            <i className="fas fa-ellipsis-h" /></li>
+
         </ul>
         <h3 className="text">Welcome, {props.user.username}</h3>
           <ProtectedRoute exact path='/' component={PinIndexContainer} />
         <button onClick={handleSignOut}>Sign Out</button>
-
       </div>
     );
   }

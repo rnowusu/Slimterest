@@ -12,6 +12,7 @@
 }
 .pin-board-modal:active {
   background-color: #c2c2d6;
+  color: white;
 }
 
 .fa-plus{

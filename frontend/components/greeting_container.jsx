@@ -17,7 +17,7 @@ const mapDispatchToProps = (dispatch) => {
   return {
     signout: () => dispatch(signout()),
     openModal: (modal) => dispatch(openModal(modal)),
-    openMenu: () => dispatch(openMenu()),
+    openMenu: (menu) => dispatch(openMenu(menu)),
     closeMenu: () => dispatch(closeMenu())
   };
 }
