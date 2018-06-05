@@ -1,12 +1,13 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { signout } from '../actions/session_actions';
+import { withRouter } from 'react-router-dom';
 
 
 const HeaderDropdown = (props) => {
   return (
     <ul className="header-dropdown">
-      <li className="header-dropdown-li">
+      <li className="header-dropdown-li" onClick={() => props.history.push("/profile")}>
         <i className="fas fa-user-circle" /> Your Profile
       </li>
       <li className="header-dropdown-li">
@@ -31,4 +32,4 @@ const mapDispatchToProps = (dispatch) => {
   };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(HeaderDropdown);
+export default connect(mapStateToProps, mapDispatchToProps)(withRouter(HeaderDropdown));

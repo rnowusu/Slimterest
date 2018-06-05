@@ -35,7 +35,6 @@ const Greeting = (props) => {
         </ul>
         <h3 className="text">Welcome, {props.user.username}</h3>
           <ProtectedRoute exact path='/' component={PinIndexContainer} />
-        <button onClick={handleSignOut}>Sign Out</button>
       </div>
     );
   }

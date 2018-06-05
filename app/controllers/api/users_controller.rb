@@ -6,7 +6,7 @@ class Api::UsersController < ApplicationController
       render "api/users/show"
 
     else
-      render json: ["No user found."], status: 401
+      render json: ["User already exists."], status: 401
     end
   end
 

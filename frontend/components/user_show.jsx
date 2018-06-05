@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import DropdownButton from './dropdown_button';
 
 class UserPage extends React.Component{
   constructor(props){
@@ -19,8 +20,10 @@ class UserPage extends React.Component{
       <div className="user-show">
         <br />
         <p>&nbsp; &nbsp;Your Pins <i className="fas fa-user-circle" /></p>
-        <ul className="user-pin-ul">{userPins}</ul>
+        <ul className="user-pin-ul">{userPins} </ul>
         <br /> <br />
+
+        <DropdownButton />
       </div>
     );
   }
