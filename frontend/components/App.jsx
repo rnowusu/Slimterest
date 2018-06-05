@@ -13,6 +13,7 @@ import ItemModal from './item_modal';
 import ClickDropdown from './click_drop_down_container';
 import MenuItems from './menu_items';
 import Pin from './pin';
+import DropdownButton from './dropdown_button';
 
 const App = () => {
   return (

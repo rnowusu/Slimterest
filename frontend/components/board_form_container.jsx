@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
-import { receiveBoard, createBoard } from '../actions/board_actions';
-import BoardForm from './board_form'
+import { receiveBoard, createBoard, fetchBoards } from '../actions/board_actions';
+import BoardForm from './board_form';
 
 const mapStateToProps = (state) => {
   return {
@@ -10,7 +10,8 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    createBoard: (board) => dispatch(createBoard(board))
+    createBoard: (board) => dispatch(createBoard(board)),
+    fetchBoards: () => dispatch(fetchBoards())
   };
 }
 

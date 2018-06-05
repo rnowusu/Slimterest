@@ -1,6 +1,7 @@
 import React from 'react';
 import { fetchPin, fetchPins } from '../actions/pin_actions';
 import { connect } from 'react-redux';
+import DropdownButton from './dropdown_button';
 
 class Pin extends React.Component{
   constructor(props){
@@ -8,17 +9,17 @@ class Pin extends React.Component{
   }
 
   componentWillMount(){
-    this.props.fetchPins();
+    // this.props.fetchPins();
     // this.props.id
     // this.props.fetchPin(this.props.match.params.pinId)
     // this.props.pin = this.props.pin ||fetchPin(this.props.match.params.pinId);
   }
 
   render(){
-    window.propsPin = this.props;
+    // window.propsPin = this.props;
     return (
       <div className="pin-show" onClick={() =>this.props.history.push("/")}>
-        <div onClick={e => e.stopPropagation()}><br />&nbsp; &nbsp;
+        <div className="pin-show-background" onClick={e => e.stopPropagation()}><br />&nbsp; &nbsp;
           <button onClick={() => this.props.history.push("/")}>
             Go back
           </button>
@@ -43,6 +44,7 @@ class Pin extends React.Component{
           </li>
         </ul>
         <br /> <br />
+        <DropdownButton />
       </div>
     );
   }

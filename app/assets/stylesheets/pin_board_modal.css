@@ -90,6 +90,10 @@
   text-align: left;
 }
 
+.pin-board-button{
+  list-style-type: none;
+}
+
 
 /* .li-div {
   display: flex;

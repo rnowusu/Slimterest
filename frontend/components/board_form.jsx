@@ -30,6 +30,9 @@ class BoardForm extends React.Component {
     this.props.createBoard({board: board});
   }
 
+  componentWillMount(){
+    // this.props.fetchBoards();
+  }
 
   render() {
     return (

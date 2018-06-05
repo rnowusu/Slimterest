@@ -21,9 +21,9 @@ const Greeting = (props) => {
           <input type="text" className="header-search-box"
             placeholder="Search" />
         </li>
-          <li className="header-home-btn">Home</li>
+          <li className="header-home-btn" onClick={() => props.history.push("/")}>Home</li>
           <li className="header-explore">Explore</li>
-          <li className="header-username"><i className="fas fa-user-circle" />
+          <li className="header-username" onClick={() => props.history.push("/profile")}><i className="fas fa-user-circle" />
           &nbsp;{props.user.username}
           </li>
           <li className="header-comment"><i className="fas fa-comment-dots" /></li>

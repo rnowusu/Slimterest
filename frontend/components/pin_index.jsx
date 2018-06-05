@@ -23,7 +23,7 @@ class PinIndex extends React.Component{
 
   componentWillMount(){
     this.props.fetchPins();
-    this.props.fetchBoards();
+    // this.props.fetchBoards();
   }
 
   componentWillUnmount(){
@@ -37,7 +37,7 @@ class PinIndex extends React.Component{
       return (
         <li key={pin.id} className="pin"
           onClick={() => this.handlePinClick(pin)}>
-          
+
           <br />
         <img className="pin-img" src={pin.picture_url}/> <br/>
           {pin.name} <br/>
