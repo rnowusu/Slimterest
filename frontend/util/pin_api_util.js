@@ -22,3 +22,10 @@ export const createPin = (pin, callback) => {
     //success: () => callback();
   });
 };
+
+export const fetchUserPins = (id) => {
+  return $.ajax({
+    method: 'GET',
+    url:`api/users/${id}/pins`
+  });
+}

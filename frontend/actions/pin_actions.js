@@ -38,3 +38,7 @@ export const fetchPin = (id) => (dispatch) => {
 export const createPin = (pin) => (dispatch) => {
   return PinApiUtil.createPin(pin).then((pin) => dispatch(receivePin(pin)))
 };
+
+export const fetchUserPins = (id) => {
+  return PinApiUtil.fetchUserPins(id).then((pins) => dispatch(receivePins(pins)))
+};

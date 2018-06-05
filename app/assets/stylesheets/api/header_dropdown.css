@@ -27,6 +27,7 @@
 
 .header-dropdown-li:active {
   background-color: #c2c2d6;
+  color: white;
 }
 
 .header-dropdown-li:hover:first-of-type{
