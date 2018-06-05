@@ -7,6 +7,9 @@ const HeaderDropdown = (props) => {
   return (
     <ul className="header-dropdown">
       <li className="header-dropdown-li">
+        <i className="fas fa-user-circle" /> Your Profile
+      </li>
+      <li className="header-dropdown-li">
         Edit Settings
       </li>
       <li className="header-dropdown-li" onClick={() => props.signout()}>

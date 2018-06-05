@@ -2,7 +2,7 @@
     position: absolute;
     float: right;
     top: 64px;
-    right: 100px;
+    right: 50px;
     border: 1px solid #E0E0E0;
     width: 320px;
     background: white;
@@ -20,6 +20,8 @@
   font-size: 32px;
   font-weight: bold;
   text-align: center;
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 .header-dropdown-li:hover {
   background-color: #E0E0E0;

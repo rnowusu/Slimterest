@@ -10,14 +10,17 @@ class UserPage extends React.Component{
     const userPins = this.props.pins.map((pin) => {
       return (
         <li key={pin.id} className="user-pin-li">
-          <img className="user-pin-img" src={pin.picture_url} />
+          <img className="user-pin-img" src={pin.picture_url}
+            onClick={() => this.props.history.push(`/pins/${pin.id}`)} />
         </li>
       );
     })
     return (
       <div className="user-show">
-        <p>Your Pins</p>
+        <br />
+        <p>&nbsp; &nbsp;Your Pins <i className="fas fa-user-circle" /></p>
         <ul className="user-pin-ul">{userPins}</ul>
+        <br /> <br />
       </div>
     );
   }
