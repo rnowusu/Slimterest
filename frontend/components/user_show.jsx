@@ -7,9 +7,17 @@ class UserPage extends React.Component{
   }
 
   render(){
+    const userPins = this.props.pins.map((pin) => {
+      return (
+        <li key={pin.id} className="user-pin-li">
+          <img className="user-pin-img" src={pin.picture_url} />
+        </li>
+      );
+    })
     return (
-      <div>
-        <p>User Show</p>
+      <div className="user-show">
+        <p>Your Pins</p>
+        <ul className="user-pin-ul">{userPins}</ul>
       </div>
     );
   }
@@ -17,7 +25,7 @@ class UserPage extends React.Component{
 
 const mapStateToProps = (state) => {
   return {
-
+    pins: Object.values(state.entities.pins).filter(pin => pin.user_id === state.session.id)
   };
 };
 
