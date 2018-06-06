@@ -75,6 +75,13 @@
   border-radius: 5px;
   font-size: 20px;
 }
+.pin-submit-btn:hover {
+  opacity: .7;
+}
+
+.pin-submit-btn:active {
+  opacity: .3;
+}
 
 .pin-form-box {
 
@@ -98,5 +105,5 @@
 }
 
 .pin:active {
-  background-color: #E0E0E0; 
+  background-color: #E0E0E0;
 }

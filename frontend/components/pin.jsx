@@ -25,9 +25,9 @@ class Pin extends React.Component{
   render(){
     // window.propsPin = this.props;
     return (
-      <div className="pin-show" onClick={() =>this.props.history.push("/")}>
+      <div className="pin-show" onClick={() =>this.props.history.goBack()}>
         <div className="pin-show-background" onClick={e => e.stopPropagation()}><br />&nbsp; &nbsp;
-          <button onClick={() => this.props.history.push("/")}>
+          <button onClick={() => this.props.history.goBack()}>
             Go back
           </button>
         </div>

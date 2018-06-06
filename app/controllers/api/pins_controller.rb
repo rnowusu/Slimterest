@@ -21,8 +21,7 @@ class Api::PinsController < ApplicationController
     if @pin.save
       render 'api/pins/show'
     else
-      render json:
-      @pin.errors.full_messages # ["You did not put in all of the required fields."]
+      render json: ["Board has invalid parameters"]#@pin.errors.full_messages # ["You did not put in all of the required fields."]
     end
   end
 
