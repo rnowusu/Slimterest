@@ -1,4 +1,4 @@
-import { RECEIVE_PINS, RECEIVE_PIN, CLEAR_PINS } from '../actions/pin_actions';
+import { RECEIVE_PINS, RECEIVE_PIN, CLEAR_PINS, REMOVE_PIN } from '../actions/pin_actions';
 import merge from 'lodash/merge';
 
 
@@ -16,6 +16,10 @@ const pinsReducer = (state = {}, action) => {
 
     case CLEAR_PINS:
     newState = {};
+    return newState;
+
+    case REMOVE_PIN:
+    newState = delete state[action.pinId]
     return newState;
 
     default:

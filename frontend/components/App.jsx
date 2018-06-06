@@ -25,7 +25,7 @@ const App = () => {
         <ItemModal />
         <ProtectedRoute path='/' component={MenuItems} />
         <ProtectedRoute path='/pins/:pinId' component={Pin} />
-        <ProtectedRoute path='/profile' component={UserPage} />
+        <ProtectedRoute path='/profile/:user_id' component={UserPage} />
 
       </header>
       <AuthRoute exact path='/' component={Modal} />

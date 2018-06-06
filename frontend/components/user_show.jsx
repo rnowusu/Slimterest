@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { fetchBoards, clearBoards } from '../actions/board_actions';
 import DropdownButton from './dropdown_button';
 
 class UserPage extends React.Component{
@@ -7,6 +8,13 @@ class UserPage extends React.Component{
     super(props);
   }
 
+  componentWillMount() {
+    this.props.fetchBoards();
+  }
+
+  componentWillUnmount(){
+    this.props.clearBoards();
+  }
   render(){
     const userPins = this.props.pins.map((pin) => {
       return (
@@ -31,13 +39,15 @@ class UserPage extends React.Component{
 
 const mapStateToProps = (state) => {
   return {
-    pins: Object.values(state.entities.pins).filter(pin => pin.user_id === state.session.id)
+    pins: Object.values(state.entities.pins).filter(pin => pin.user_id === state.session.id),
+    boards: Object.values(state.entities.boards).filter(board => board.user_id === state.session.id)
   };
 };
 
 export const mapDispatchToProps = (dispatch) => {
   return {
-
+    fetchBoards: () => dispatch(fetchBoards()),
+    clearBoards: () => dispatch(clearBoards())
   };
 };
 

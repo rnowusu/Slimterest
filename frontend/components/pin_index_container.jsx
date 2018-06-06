@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import { fetchPins, fetchPin, createPin, clearPins } from '../actions/pin_actions';
-import { fetchBoards } from '../actions/board_actions';
+import { fetchBoards, clearBoards } from '../actions/board_actions';
 import PinIndex from './pin_index';
 import { openItemModal } from '../actions/item_modal_actions';
 import { openMenu, closeMenu } from '../actions/click_menu_actions';
@@ -27,7 +27,8 @@ const mapDispatchToProps = (dispatch) => {
     clearPins: () => dispatch(clearPins()),
     fetchBoards: () => dispatch(fetchBoards()),
     openMenu: () => dispatch(openMenu("Side Drop Down")),
-    closeMenu: () => dispatch(closeMenu())
+    closeMenu: () => dispatch(closeMenu()),
+    clearBoards: () => dispatch(clearBoards())
   };
 };
 

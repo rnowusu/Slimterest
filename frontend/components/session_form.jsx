@@ -16,6 +16,7 @@ class SessionForm extends React.Component {
 
   demoLogin(e){
     e.preventDefault();
+    this.props.clearErrors();
     let userName = "Demo";
     let password = "slimterest";
 
@@ -41,6 +42,7 @@ class SessionForm extends React.Component {
 
   update(field){
     return e => {
+      this.props.clearErrors();
       this.setState({[field]: e.target.value});
     }
   }

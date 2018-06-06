@@ -23,11 +23,15 @@ class PinIndex extends React.Component{
 
   componentWillMount(){
     this.props.fetchPins();
+  }
+
+  componentDidMount(){
     // this.props.fetchBoards();
   }
 
   componentWillUnmount(){
     // this.props.clearPins();
+    this.props.clearBoards();
   }
 
   render(){

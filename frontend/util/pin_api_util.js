@@ -29,3 +29,17 @@ export const fetchUserPins = (id) => {
     url:`api/users/${id}/pins`
   });
 }
+
+export const editPin = (id) => {
+  return $.ajax({
+    method: "PATCH",
+    url: `api/users/${currentUser}/pins/${id}`
+  });
+};
+
+export const deletePin = (id) => {
+  return $.ajax({
+    method: "DELETE",
+    url: `api/users/${currentUser.id}/pins/${id}`
+  });
+};

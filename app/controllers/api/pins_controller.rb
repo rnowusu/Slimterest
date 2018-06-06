@@ -37,15 +37,16 @@ class Api::PinsController < ApplicationController
 
   def update
     @pin = Pin.find_by(id: params[:id])
-    if @pin
-      render 'api/pins/update'
+    if @pin.update_attributes(pin_params)
+      render 'api/pins/show'
     else
       render json: ["Unable to find Pin."]
     end
   end
 
   def destroy
-
+    @pin = Pin.find_by(id: params[:id])
+    @pin.destroy
   end
 
   def pin_params

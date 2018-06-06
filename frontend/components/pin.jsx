@@ -1,4 +1,5 @@
 import React from 'react';
+import { fetchBoards, clearBoards } from '../actions/board_actions';
 import { fetchPin, fetchPins } from '../actions/pin_actions';
 import { connect } from 'react-redux';
 import DropdownButton from './dropdown_button';
@@ -9,10 +10,15 @@ class Pin extends React.Component{
   }
 
   componentWillMount(){
-    // this.props.fetchPins();
+    this.props.fetchBoards();
+    this.props.fetchPins();
     // this.props.id
     // this.props.fetchPin(this.props.match.params.pinId)
     // this.props.pin = this.props.pin ||fetchPin(this.props.match.params.pinId);
+  }
+
+  componentWillUnmount(){
+    this.props.clearBoards();
   }
 
   render(){
@@ -62,7 +68,9 @@ const mapStateToProps = (state, ownProps) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     fetchPin: (id) => dispatch(fetchPin(id)),
-    fetchPins: () => dispatch(fetchPins())
+    fetchPins: () => dispatch(fetchPins()),
+    fetchBoards: () => dispatch(fetchBoards()),
+    clearBoards: () => dispatch(clearBoards())
   };
 };
 

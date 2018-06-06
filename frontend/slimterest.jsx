@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import configureStore from './store/store'
 import Root from './components/root'
 import { signup, login, signout } from './actions/session_actions';
-import { fetchPins, fetchPin, createPin, fetchUserPins } from './actions/pin_actions';
+import { fetchPins, fetchPin, createPin, fetchUserPins, editPin, deletePin } from './actions/pin_actions';
 import { createBoard, fetchBoard, fetchBoards } from './actions/board_actions';
 // import * as SessionApiUtil from './util/session_api_util';
 import { openItemModal, closeItemModal } from './actions/item_modal_actions';
@@ -24,6 +24,9 @@ document.addEventListener('DOMContentLoaded', () => {
   // window.signout = signout;
   // window.signup = signup;
 
+
+  window.editPin = editPin;
+  window.deletePin = deletePin;
   window.fetchUserPins = fetchUserPins;
   window.fetchPins = fetchPins;
   window.fetchPin = fetchPin;

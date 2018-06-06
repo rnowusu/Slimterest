@@ -4,7 +4,8 @@ import * as PinApiUtil from '../util/pin_api_util';
 
 export const RECEIVE_PINS = "RECEIVE_PINS";
 export const RECEIVE_PIN = "RECEIVE_PIN";
-export const CLEAR_PINS = "CLEAR_PINS"
+export const CLEAR_PINS = "CLEAR_PINS";
+export const REMOVE_PIN = "REMOVE_PIN";
 
 export const receivePins = (pins) => {
   return {
@@ -26,6 +27,13 @@ export const clearPins = () => {
   };
 };
 
+export const removePin = (pinId) => {
+  return {
+    type: REMOVE_PIN,
+    pin: pinId
+  };
+}
+
 
 export const fetchPins = () => (dispatch) => {
   return PinApiUtil.fetchPins().then((pins) => dispatch(receivePins(pins)))
@@ -41,4 +49,12 @@ export const createPin = (pin) => (dispatch) => {
 
 export const fetchUserPins = (id) => {
   return PinApiUtil.fetchUserPins(id).then((pins) => dispatch(receivePins(pins)))
+};
+
+export const editPin = (id) => {
+  return PinApiUtil.editPin(id).then((pin) => dispatch(receivePin(pin)))
+};
+
+export const deletePin = (id) => {
+  return PinApiUtil.deletePin(id).then(() => dispatch(remove_pin(id)))
 };
