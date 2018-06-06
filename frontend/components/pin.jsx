@@ -10,6 +10,7 @@ class Pin extends React.Component{
   }
 
   componentWillMount(){
+    window.scrollTo(0,0);
     this.props.fetchBoards();
     this.props.fetchPins();
     // this.props.id

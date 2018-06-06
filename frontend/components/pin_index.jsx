@@ -18,6 +18,7 @@ class PinIndex extends React.Component{
 
   handlePinClick(pin){
     this.props.history.push(`/pins/${pin.id}`);
+    // window.scrollTo(0,0);
     return (<ProtectedRoute path={`/pins/${pin.id}`} component={Pin} />);
   }
 
@@ -26,7 +27,7 @@ class PinIndex extends React.Component{
   }
 
   componentDidMount(){
-    // this.props.fetchBoards();
+    this.props.fetchBoards();
   }
 
   componentWillUnmount(){

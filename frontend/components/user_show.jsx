@@ -10,6 +10,7 @@ class UserPage extends React.Component{
 
   componentWillMount() {
     this.props.fetchBoards();
+    window.scrollTo(0,0);
   }
 
   componentWillUnmount(){

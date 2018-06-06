@@ -17,6 +17,6 @@ export const fetchBoard = (id) => {
 export const fetchBoards = () => {
   return $.ajax({
     method: "GET",
-    url: `api/users/${currentUser.id}/boards`
+    url: `api/boards`
   });
 }
