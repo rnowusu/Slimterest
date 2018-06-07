@@ -36,7 +36,7 @@ class PinIndex extends React.Component{
   }
 
   render(){
-    window.propsIndex = this.props
+    // window.propsIndex = this.props
     // `/pins/${pin.id}`
     const pins = this.props.pins.map((pin) => {
       return (

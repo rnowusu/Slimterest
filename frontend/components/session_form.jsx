@@ -23,6 +23,7 @@ class SessionForm extends React.Component {
     for (let j = 1; j <= password.length; j++){
         setTimeout(() => {this.setState({username:"Demo", password: password.slice(0, j)});}, 100*j);
     }
+    setTimeout(() => document.getElementsByClassName("session-submit")[0].click(), 1500);
   }
 
   handleSubmit(e){
@@ -109,5 +110,4 @@ class SessionForm extends React.Component {
 
 // document.getElementsByClassName("login-input")[0].value="Demo"
 // document.getElementsByClassName("login-input")[1].value="slimterest"
-// document.getElementsByClassName("session-submit")[0].click()
 export default withRouter(SessionForm);
