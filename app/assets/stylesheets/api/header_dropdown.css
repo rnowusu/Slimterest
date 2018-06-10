@@ -1,5 +1,5 @@
 .header-dropdown {
-    position: absolute;
+    position: fixed;
     float: right;
     top: 64px;
     right: 50px;

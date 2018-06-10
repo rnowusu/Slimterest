@@ -1,5 +1,5 @@
 .pin-board-modal {
-  position: sticky;
+  position: fixed;
   right: 40px;
   bottom: 30px;
   background-color: white;
@@ -34,7 +34,7 @@
 
 .dropdown-ul{
   float: right;
-  position: sticky;
+  position: fixed;
   right: 70px;
   bottom: 55px;
   width: 286px;
