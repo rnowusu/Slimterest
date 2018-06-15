@@ -1,6 +1,6 @@
 import React from 'react';
 import { fetchBoards, clearBoards } from '../actions/board_actions';
-import { fetchPin, fetchPins } from '../actions/pin_actions';
+import { fetchPin, fetchPins, clearPins } from '../actions/pin_actions';
 import { connect } from 'react-redux';
 import DropdownButton from './dropdown_button';
 
@@ -20,10 +20,12 @@ class Pin extends React.Component{
 
   componentWillUnmount(){
     this.props.clearBoards();
+    // this.props.clearPins();
   }
 
   render(){
     // window.propsPin = this.props;
+    // window.propsState = this.props.state;
     return (
       <div className="pin-show" onClick={() =>this.props.history.goBack()}>
         <div className="pin-show-background" onClick={e => e.stopPropagation()}><br />&nbsp; &nbsp;
@@ -60,7 +62,7 @@ class Pin extends React.Component{
 
 const mapStateToProps = (state, ownProps) => {
   return {
-    pin: state.entities.pins[ownProps.match.params.pinId],
+    pin: state.entities.pins[ownProps.match.params.pinId]//,
     // ownProps: ownProps,
     // state: state
   };
@@ -71,7 +73,8 @@ const mapDispatchToProps = (dispatch) => {
     fetchPin: (id) => dispatch(fetchPin(id)),
     fetchPins: () => dispatch(fetchPins()),
     fetchBoards: () => dispatch(fetchBoards()),
-    clearBoards: () => dispatch(clearBoards())
+    clearBoards: () => dispatch(clearBoards()),
+    clearPins: () => dispatch(clearPins())
   };
 };
 

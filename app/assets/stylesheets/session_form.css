@@ -50,6 +50,11 @@
   height: 30px;
   border-radius: 5px;
   font-size: 20px;
+  cursor: pointer;
+}
+.session-submit:active {
+  /* background-color: #E0E0E0; */
+  opacity: .5;
 }
 
 .login-input {
