@@ -13,7 +13,7 @@ export const fetchPin = (id) => {
 };
 
 export const createPin = (pin, callback) => {
-  debugger
+  // debugger
   return $.ajax({
     method: "POST",
     url: `/api/users/${pin.get("pin[user_id]")}/pins`,
