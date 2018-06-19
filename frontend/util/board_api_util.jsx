@@ -1,7 +1,7 @@
 export const createBoard = (board) => {
   return $.ajax({
     method: "POST",
-    url: `api/users/${currentUser.id}/boards`,
+    url: `api/users/${board.user_id}/boards`,
     data: board
   });
 };
@@ -10,7 +10,7 @@ export const createBoard = (board) => {
 export const fetchBoard = (id) => {
   return $.ajax({
     method: "GET",
-    url: `api/users/${currentUser.id}/boards/${id}`
+    url: `api/boards/${id}`
   });
 };
 

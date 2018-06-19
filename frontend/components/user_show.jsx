@@ -30,7 +30,7 @@ class UserPage extends React.Component{
         <br />
         <p>&nbsp; &nbsp;Your Pins <i className="fas fa-user-circle" /></p>
         <ul className="user-pin-ul">{userPins} </ul>
-        <br /> <br />
+          <br />{userPins.length} Pins <br /> <br /> <br />
 
         <DropdownButton />
       </div>

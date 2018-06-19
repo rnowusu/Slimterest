@@ -44,6 +44,8 @@ gem 'annotate'
 
 gem 'jquery-rails'
 
+gem 'pg_search'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
