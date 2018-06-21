@@ -3,7 +3,8 @@ import GreetingContainer from './greeting';
 import { Link } from 'react-router-dom';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import PinIndexContainer from './pin_index_container';
-import HeaderDropdown from './header_dropdown'
+import HeaderDropdown from './header_dropdown';
+import SearchBar from './search_bar';
 
 const Greeting = (props) => {
   const handleSignOut = () => {
@@ -33,6 +34,7 @@ const Greeting = (props) => {
 
         </ul>
         <h3 className="text">Welcome, {props.user.username}</h3>
+          <SearchBar />
           <ProtectedRoute exact path='/' component={PinIndexContainer} />
       </div>
     );

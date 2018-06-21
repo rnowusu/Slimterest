@@ -6,7 +6,7 @@ class Api::UsersController < ApplicationController
       render "api/users/show"
 
     else
-      render json: ["User already exists."], status: 401
+      render json: @user.errors.full_messages, status: 401#["User already exists."], status: 401
     end
   end
 

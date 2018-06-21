@@ -7,7 +7,7 @@ import { withRouter } from 'react-router-dom';
 const HeaderDropdown = (props) => {
   return (
     <ul className="header-dropdown">
-      <li className="header-dropdown-li" onClick={() => props.history.push(`/profile/${currentUser.id}`)}>
+      <li className="header-dropdown-li" onClick={() => props.history.push(`/profile/${props.currentUser}`)}>
         <i className="fas fa-user-circle" /> Your Profile
       </li>
       <li className="header-dropdown-li">
@@ -22,7 +22,8 @@ const HeaderDropdown = (props) => {
 
 const mapStateToProps = (state) => {
   return {
-    menuType: state.ui.menu
+    menuType: state.ui.menu,
+    currentUser: state.session.id
   };
 }
 
