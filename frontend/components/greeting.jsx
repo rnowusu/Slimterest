@@ -21,8 +21,7 @@ const Greeting = (props) => {
               <img className="logo-svg" src='http://www.clker.com/cliparts/g/d/D/A/l/9/sl-logo.svg.thumb.png' alt='Sl Logo clip art'/></Link>
               </li>
           <li className="header-search">&nbsp;<i className="fas fa-search" />
-          <input type="text" className="header-search-box"
-            placeholder="Search" />
+          <SearchBar />
         </li>
           <li className="header-home-btn" onClick={() => props.history.push("/")}>Home</li>
           <li className="header-username" onClick={() => props.history.push(`/profile/${props.user.id}`)}><i className="fas fa-user-circle" />
@@ -34,7 +33,6 @@ const Greeting = (props) => {
 
         </ul>
         <h3 className="text">Welcome, {props.user.username}</h3>
-          <SearchBar />
           <ProtectedRoute exact path='/' component={PinIndexContainer} />
       </div>
     );

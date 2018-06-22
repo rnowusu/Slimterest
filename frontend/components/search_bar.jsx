@@ -13,17 +13,16 @@ class SearchBar extends React.Component {
       console.log(this.state);
       // let pins = Object.values(this.props.pins).filter(pin => this.state.query.toLowerCase().split(" ").includes(pin.name.toLowerCase() || pin.description.toLowerCase() || pin.category.toLowerCase()));
       let pins = Object.values(this.props.pins).filter(pin => this.state.query.toLowerCase().split(" ").includes(pin.name.toLowerCase()) || this.state.query.toLowerCase().split(" ").includes(pin.category.toLowerCase()));
-      // let pins = Object.values(this.props.pins).filter(pin => pin.name.toLowerCase().includes(this.state.query.toLowerCase()) || pin.category.includes(this.state.query.toLowerCase()));
-      // debugger
-      // let pins = Object.values(this.props.pins).filter(pin => this.state.query.toLowerCase().split(" ").some(splitQueryEl => pin.name.toLowerCase() === splitQueryEl || pin.description.toLowerCase() === splitQueryEl || pin.category.toLowerCase() === splitQueryEl));
-      // console.log(Object.values(this.props.pins));
       console.log(pins);
       this.setState({ query: "" })
       e.target.value = "";
-      // e.target.setState({query:""});
-
+      this.querySearch = pins;
       }
     });
+  }
+
+  handleSearchClick(pin) {
+
   }
 
   handleChange(e){
@@ -35,8 +34,23 @@ class SearchBar extends React.Component {
   }
 
   render() {
-    return (<input id="search-input" type="text" className="header-search-box"
-      placeholder="Search" onChange={ this.handleChange.bind(this) } />
+    let queryPins;
+    if (this.querySearch){
+      queryPins = this.querySearch.map(pin => {
+        return (<li key={pin.id} className="search-items-li" onClick={() => this.handleSearchClick(pin)}>
+        <img className="user-pin-img" src={pin.picture_url} onClick={() => this.props.history.push(`/pins/${pin.id}`)}/>
+          Name: {pin.name} Category: {pin.category}
+      </li>);
+      })
+    }
+
+    return (
+      <div className="search-div">
+        <input id="search-input" type="text" className="header-search-box"
+          placeholder="Search" onChange={ this.handleChange.bind(this) } />
+        <ul className="search-items">{queryPins}</ul>
+      </div>
+
     );
   }
 
