@@ -13,7 +13,7 @@ class SearchBar extends React.Component {
       if (e.keyCode === 13){
       console.log(this.state);
       // let pins = Object.values(this.props.pins).filter(pin => this.state.query.toLowerCase().split(" ").includes(pin.name.toLowerCase() || pin.description.toLowerCase() || pin.category.toLowerCase()));
-      let pins = Object.values(this.props.pins).filter(pin => this.state.query.toLowerCase().split(" ").includes(pin.name.toLowerCase()) || this.state.query.toLowerCase().split(" ").includes(pin.category.toLowerCase()));
+      let pins = Object.values(this.props.pins).filter(pin => this.state.query.toLowerCase().split(" ").includes(pin.name.toLowerCase()) || this.state.query.toLowerCase().split(" ").includes(pin.category.toLowerCase()) || this.state.query.toLowerCase().includes(pin.name.toLowerCase()) );
       this.querySearch = pins;
       console.log(pins);
       this.setState({ query: "" })
