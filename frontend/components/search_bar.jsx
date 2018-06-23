@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
 
 class SearchBar extends React.Component {
   constructor(props) {
@@ -13,20 +14,29 @@ class SearchBar extends React.Component {
       console.log(this.state);
       // let pins = Object.values(this.props.pins).filter(pin => this.state.query.toLowerCase().split(" ").includes(pin.name.toLowerCase() || pin.description.toLowerCase() || pin.category.toLowerCase()));
       let pins = Object.values(this.props.pins).filter(pin => this.state.query.toLowerCase().split(" ").includes(pin.name.toLowerCase()) || this.state.query.toLowerCase().split(" ").includes(pin.category.toLowerCase()));
+      this.querySearch = pins;
       console.log(pins);
       this.setState({ query: "" })
       e.target.value = "";
-      this.querySearch = pins;
-      }
+    } else if (e.keyCode === 27){
+      e.target.value = "";
+      this.querySearch = undefined;
+      this.setState({ query: "" })
+      console.log(this.state);
+    }
     });
   }
 
   handleSearchClick(pin) {
+    this.props.history.push(`/pins/${pin.id}`);
 
   }
 
   handleChange(e){
-    this.setState({ query: e.target.value })
+    this.setState({ query: e.target.value });
+    // let pins = Object.values(this.props.pins).filter(pin => this.state.query.toLowerCase().split(" ").includes(pin.name.toLowerCase()) || this.state.query.toLowerCase().split(" ").includes(pin.category.toLowerCase()));
+    // this.querySearch = pins;
+    // console.log(this.state);
   }
 
   handleSubmit(e){
@@ -38,8 +48,12 @@ class SearchBar extends React.Component {
     if (this.querySearch){
       queryPins = this.querySearch.map(pin => {
         return (<li key={pin.id} className="search-items-li" onClick={() => this.handleSearchClick(pin)}>
-        <img className="user-pin-img" src={pin.picture_url} onClick={() => this.props.history.push(`/pins/${pin.id}`)}/>
-          Name: {pin.name} Category: {pin.category}
+        &nbsp; <img className="user-pin-img img-height" src={pin.picture_url} onClick={() => this.props.history.push(`/pins/${pin.id}`)}/>
+          &nbsp;
+          <span className="search-result-text">
+            {pin.name} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Category: {pin.category}
+          </span>
+          &nbsp;
       </li>);
       })
     }
@@ -70,4 +84,4 @@ const mapDispatchToProps = mapDispatchToProps => {
   };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(SearchBar)
+export default connect(mapStateToProps, mapDispatchToProps)(withRouter(SearchBar));

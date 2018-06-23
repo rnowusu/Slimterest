@@ -47,6 +47,11 @@ class Pin extends React.Component{
             </div>
             <div className="pin-show-li-div">
               <br />
+              {this.props.pin.category}
+              <br /><br />
+            </div>
+            <div className="pin-show-li-div">
+              <br />
               {this.props.pin.description}
               <br /><br />
             </div>
