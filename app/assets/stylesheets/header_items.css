@@ -26,6 +26,10 @@
   /* position: absolute; */
 }
 
+.header-items li {
+  font-family: "Helvetica Neue";
+}
+
 .header-logo {
 font-size: 25px;
 color:#b5b5b5;
@@ -43,7 +47,7 @@ font-size: 32px;
 color:#555;
 background-color: #b5b5b5;
 border-radius: 7px;
-/* width: 40%; */
+width: 45%;
 height: 100%;
 border: 1px solid white;
 }
@@ -57,7 +61,7 @@ border: 1px solid white;
   border: none;
   border-radius: 7px;
   outline: none;
-  width: 87%;
+  width: 92%;
   /* padding-top: 7px; */
 }
 

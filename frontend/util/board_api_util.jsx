@@ -20,3 +20,10 @@ export const fetchBoards = () => {
     url: `api/boards`
   });
 }
+
+// export const fetchUserBoards = () => {
+//   return $.ajax({
+//     method: "GET",
+//     url: `api/boards`
+//   });
+// }

@@ -36,6 +36,7 @@
   height: 470px;
   width: 400px;
   box-shadow: 1px 1px 1px 1px grey;
+  font-family: "Helvetica Neue";
 }
 
 .session-form-headers {
