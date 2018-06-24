@@ -20,11 +20,14 @@ class UserBoardIndex extends React.Component{
     const boardComponent = boardsWithPins.map((board, idx) => {
       const boardImgs = board.slice(0,6).map((pin, idx) => {if(pin){return (<img className="user-board-img" key={idx} src={pin.picture_url}/>);}})
       if(board.length >= 1){
+        // console.log(userBoards.find(board => board.id === pin.board_id).name);
         return (
           <div key={idx} className="user-board-div">
             <li className="user-board-li">
               {boardImgs}
             </li>
+            <span className="user-board-name">{userBoards[idx].name}</span>
+            <br /><span className="board-pin-count"> {board.length} Pins</span>
           </div>
         );
       }else {
@@ -32,12 +35,15 @@ class UserBoardIndex extends React.Component{
           <div key={idx} className="user-board-div">
             <li className="user-board-li">
             </li>
+            <span className="user-board-name">{userBoards[idx].name}</span>
+            <br /><span className="board-pin-count"> {board.length} Pins</span>
           </div>
         );
       }
     })
     console.log(boardsWithPins);
     console.log("before render");
+
     return(
       <div className="user-boards-div">
         <br /> Your Boards

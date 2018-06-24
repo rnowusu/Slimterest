@@ -1,5 +1,5 @@
 .user-boards-div {
-  border: 1px solid #E0E0E0;
+  /* border: 1px solid #E0E0E0; */
   padding: 0;
   font-family: "Helvetica-Neue";
   font-size: bold;
@@ -59,7 +59,7 @@
 }
 
 .user-board-div{
-  padding:1px;
+  padding:8px;
   width:28%;
   border-radius: 10px;
 }
@@ -77,4 +77,19 @@
   background-color: rgba(0,0,0,0.05);
   cursor: pointer;
   /* z-index: 12; */
+}
+
+.user-board-name{
+  position: relative;
+  top:-10px;
+  /* font-size: 20px; */
+  color: #555;
+  font-weight: bold;
+}
+
+.board-pin-count{
+  position: relative;
+  bottom:20px;
+  font-size: 20px;
+  color:inherit;
 }
