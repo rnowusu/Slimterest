@@ -88,8 +88,28 @@
 }
 
 .board-pin-count{
+  z-index: -2;
   position: relative;
   bottom:20px;
   font-size: 20px;
   color:inherit;
+}
+
+.boards-link{
+  z-index:0;
+  font-size: 20px;
+  color: #a0a0a0;
+  padding: 10px;
+}
+.boards-link:hover{
+  /* background-color:  */
+  text-decoration: underline;
+  cursor: pointer;
+}
+.boards-link:active{
+  color: #bd081c;
+}
+
+span{
+    /* z-index: -1; */
 }

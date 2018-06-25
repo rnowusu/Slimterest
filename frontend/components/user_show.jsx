@@ -14,7 +14,7 @@ class UserPage extends React.Component{
   }
 
   componentWillUnmount(){
-    this.props.clearBoards();
+    // this.props.clearBoards();
   }
   render(){
     const userPins = this.props.pins.map((pin) => {
@@ -28,7 +28,8 @@ class UserPage extends React.Component{
     return (
       <div className="user-show">
         <br />
-        <p>&nbsp; &nbsp;Your Pins <i className="fas fa-user-circle" /></p>
+        <p>&nbsp; &nbsp;Your Pins <i className="fas fa-user-circle" /><br/> <span className="boards-link" onClick={()=> this.props.history.push(`/profile/boards/all`)}>
+          Go to Boards</span></p>
         <ul className="user-pin-ul">{userPins} </ul>
           <br />{userPins.length} Pins <br /> <br /> <br />
 

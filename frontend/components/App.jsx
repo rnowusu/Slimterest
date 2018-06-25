@@ -15,6 +15,7 @@ import MenuItems from './menu_items';
 import Pin from './pin';
 import DropdownButton from './dropdown_button';
 import UserPage from './user_show';
+import UserBoardIndex from './user_board_index.jsx';
 
 const App = () => {
   return (
@@ -25,7 +26,8 @@ const App = () => {
         <ItemModal />
         <ProtectedRoute path='/' component={MenuItems} />
         <ProtectedRoute path='/pins/:pinId' component={Pin} />
-        <ProtectedRoute path='/profile/:user_id' component={UserPage} />
+        <ProtectedRoute exact path='/profile/:user_id' component={UserPage} />
+        <ProtectedRoute exact path='/profile/boards/all' component={UserBoardIndex} />
 
       </header>
       <AuthRoute exact path='/' component={Modal} />
