@@ -46,7 +46,9 @@ class UserBoardIndex extends React.Component{
 
     return(
       <div className="user-boards-div">
-        <br /> Your Boards
+        <br /> Your Boards <br />
+          <span className="boards-link" onClick={()=> this.props.history.push(`/profile/${this.props.currentUserId}`)}>
+            Go to Pins</span>
         <ul className="user-board-ul">
           <div className="user-board-div">
           <li className="user-board-li">
